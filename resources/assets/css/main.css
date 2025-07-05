@@ -32,6 +32,9 @@
     background-color: #E5E7EB;
     font-family: 'Outfit', sans-serif;
   }
+  * {
+    scroll-behavior: smooth !important;
+  }
 
 
 
@@ -61,4 +64,11 @@
       opacity: 0;
       top: 60px;
    }
+ }
+
+
+ .neumorphism {
+  background: #e0e0e0;
+  box-shadow:  20px 20px 60px #bebebe,
+               -20px -20px 60px #ffffff;
  }

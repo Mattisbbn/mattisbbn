@@ -13,9 +13,9 @@ function view($view, $data = []) {
 }
 
 function vite($entry) {
-    $manifestPath = $_ENV['VITE_MANIFEST'];
+    $manifestPath = __DIR__ . '/../' . $_ENV['VITE_MANIFEST'];
     $devServer = $_ENV['VITE_SERVER'];
-    $isDev = false;
+  
     
     if (strpos($entry, '/') === false) {
         $extension = pathinfo($entry, PATHINFO_EXTENSION);
@@ -36,14 +36,16 @@ function vite($entry) {
         $tags = '';
         if (isset($manifest[$entry]['css'])) {
             foreach ($manifest[$entry]['css'] as $css) {
-                $tags .= "<link rel=\"stylesheet\" href=\"/assets/$css\">\n";
+                $tags .= "<link rel=\"stylesheet\" href=\"/build/$css\">\n";
             }
         }
         $file = $manifest[$entry]['file'] ?? null;
         if ($file) {
-            $tags .= "<script type=\"module\" src=\"/assets/$file\"></script>\n";
+            $tags .= "<script type=\"module\" src=\"/build/$file\"></script>\n";
         }
         return $tags;
+    }else{
+        dd('no manifest');
     }
     return '';
 }

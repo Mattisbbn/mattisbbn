@@ -1,5 +1,4 @@
 import { defineConfig } from 'vite'
-import php from 'vite-plugin-php'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
@@ -17,22 +16,16 @@ export default defineConfig({
       },
   },
   plugins: [
-    php({
-      reload: ['../resources/Views/**/*.php'],
-    }),
     tailwindcss(),
   ],
-  watch: {
-    ignored: ['!**/resources/**'],
-    include: ['resources/**/*']
-  },
   build: {
     manifest: true,
-    outDir: 'build',
+    outDir: '../public/build',
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: 'resources/assets/js/main.js'
+        main: 'resources/assets/js/main.js',
+        home: 'resources/assets/js/home.ts'
       }
     }
   }
