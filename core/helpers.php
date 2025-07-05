@@ -1,5 +1,7 @@
 <?php
 use App\Config;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
 function view($view, $data = []) {
     $viewPath = Config::VIEW_DIR . $view . '.php';
@@ -61,4 +63,29 @@ function component(string $name, array $data = []): string{
     ob_start();
     include $file;
     return ob_get_clean();
+}
+
+function checkCSRF($token){
+    if($_SESSION['CSRF_TOKEN'] !== $token){
+        throw new Exception("CSRF token invalide");
+    }
+}
+
+function sendMail($email, $name, $subject, $message){
+    $mail = new PHPMailer(true);
+    $mail->isSMTP();
+    $mail->Host = 'smtp.gmail.com';
+    $mail->SMTPAuth = true;
+    $mail->Username = $_ENV['MAIL_USERNAME'];
+    $mail->Password = $_ENV['MAIL_PASSWORD'];
+    $mail->SMTPSecure = 'tls';
+    $mail->Port = 587;
+
+    $mail->setFrom($_ENV['MAIL_USERNAME'], $name);
+    $mail->addAddress($_ENV['MAIL_USERNAME']);
+    $mail->addReplyTo($email, $name);
+    $mail->Subject = "Nouveau message de " . $name . " - " . $subject;
+    $mail->Body = $message . "\n\n" . "Email : " . $email;
+
+    $mail->send();
 }

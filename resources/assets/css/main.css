@@ -68,7 +68,11 @@
 
 
  .neumorphism {
-  background: #e0e0e0;
-  box-shadow:  20px 20px 60px #bebebe,
-               -20px -20px 60px #ffffff;
+    background: #e0e0e0;
+    box-shadow:  20px 20px 60px #bebebe,-20px -20px 60px #ffffff;
+ }
+
+ .inner-neumorphism {
+    background: #E5E7EB;
+    box-shadow: 5px 5px 23px -7px rgba(0, 0, 0, 0.2);
  }

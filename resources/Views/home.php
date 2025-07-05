@@ -125,27 +125,27 @@
 
             <div class="flex flex-wrap flex-row justify-center gap-4 mb-8">
         
-                <div class="bg-white   px-6 py-4 flex items-center gap-2 neumorphism  rounded-full">
+                <div class="px-6 py-4 flex items-center gap-2 neumorphism  rounded-full">
                     <img src="assets/images/laravel.svg" alt="Laravel" class="w-6 h-6">
                     <span class="text-gray-700">Laravel</span>
                 </div>
         
-                <div class="bg-white  px-6 py-4 flex items-center gap-2 neumorphism rounded-full ">
+                <div class="px-6 py-4 flex items-center gap-2 neumorphism rounded-full ">
                     <img src="assets/images/react.svg" alt="Laravel" class="w-6 h-6">
                     <span class="text-gray-700">React</span>
                 </div>
 
-                <div class="bg-white  px-6 py-4 flex items-center gap-2 neumorphism rounded-full ">
+                <div class="px-6 py-4 flex items-center gap-2 neumorphism rounded-full ">
                     <img src="assets/images/tailwindcss.svg" alt="Laravel" class="w-6 h-6">
                     <span class="text-gray-700">Tailwind</span>
                 </div>
 
-                <div class="bg-white  px-6 py-4 flex items-center gap-2 neumorphism rounded-full ">
+                <div class="px-6 py-4 flex items-center gap-2 neumorphism rounded-full ">
                     <img src="assets/images/mariadb.svg" alt="Laravel" class="w-6 h-6">
                     <span class="text-gray-700">MariaDB</span>
                 </div>   
                 
-                <div class="bg-white  px-6 py-4 flex items-center gap-2 neumorphism rounded-full ">
+                <div class="px-6 py-4 flex items-center gap-2 neumorphism rounded-full ">
                     <img src="assets/images/git.svg" alt="Laravel" class="w-6 h-6">
                     <span class="text-gray-700">Git</span>
                 </div>
@@ -161,12 +161,12 @@
               <div class="flex flex-wrap flex-row justify-center gap-4 mb-14">
         
                 
-                <div class="bg-white  px-6 py-4 flex items-center gap-2 neumorphism rounded-full ">
+                <div class="px-6 py-4 flex items-center gap-2 neumorphism rounded-full ">
                     <img src="assets/images/nextjs.svg" alt="Laravel" class="w-6 h-6">
                     <span class="text-gray-700">Next.js</span>
                 </div>
 
-                <div class="bg-white  px-6 py-4 flex items-center gap-2 neumorphism rounded-full ">
+                <div class="px-6 py-4 flex items-center gap-2 neumorphism rounded-full ">
                     <img src="assets/images/react.svg" alt="Laravel" class="w-6 h-6">
                     <span class="text-gray-700">React Native</span>
                 </div>
@@ -182,7 +182,7 @@
 
         <div class="flex flex-wrap justify-center gap-4">
 
-            <div class="project-card w-3/13  neumorphism rounded-lg  overflow-hidden">
+            <div class="project-card w-10/12 sm:w-1/2 md:w-3/6 lg:w-3/8 xl:w-4/13 2xl:w-3/13 neumorphism rounded-lg  overflow-hidden">
                 <img src="assets/images/clickneat.webp" alt="Interface du site Click & Eat, application web de commande de repas développée par Mattis Babin" class="w-full object-cover rounded-t-lg">
                 <div class="p-4">
                     <h3 class="text-xl font-bold text-gray-800 mb-2">Click & Eat</h3>
@@ -229,25 +229,51 @@
     </section>
 
 
-    <section class="flex flex-col h-screen  mx-auto introduction justify-center align-middle ">
+    <section class="flex flex-col h-screen  mx-auto introduction justify-center align-middle w-11/12 md:w-1/1 ">
         <h2 class="text-4xl sm:text-5xl text-center font-bold text-gray-800   mb-12">Me contacter</h2>
 
+        <form action="/send-mail" id="contact" method="POST" class="flex flex-wrap  justify-center gap-4">
+<input type="hidden" name="CSRF_TOKEN" value="<?= $_SESSION['CSRF_TOKEN'] ?>">
 
-        <div class="flex flex-wrap justify-center gap-4">
+            <div class=" rounded-xl p-8 shadow-[5px_5px_23px_-7px_rgba(0,_0,_0,_0.2)] bg-gray-100/50 flex flex-col">
+        
+            <?php if(isset($_SESSION['error'])): ?>
+                <div class="text-red-500 text-center mb-4 border-2 border-red-500 bg-red-500/10 error rounded-lg p-2 relative">
+                    <?= $_SESSION['error'] ?> <i class="remove-error ms-auto fa-solid fa-xmark absolute top-1/2 -translate-y-1/2 right-2 cursor-pointer"></i>
+                </div>
+                <?php unset($_SESSION['error']); ?>
+            <?php endif; ?>
 
-            <div class="neumorphism rounded-lg ">
-              
-                <input type="text" name="name" id="name" placeholder="Nom" class="w-full p-2 rounded-lg">
-                <input type="email" name="email" id="email" placeholder="Email" class="w-full p-2 rounded-lg">
-                <input type="text" name="subject" id="subject" placeholder="Sujet" class="w-full p-2 rounded-lg">
-                <textarea name="message" id="message" placeholder="Message" class="w-full p-2 rounded-lg"></textarea>
-                <button type="submit" class="w-full p-2 rounded-lg bg-royal-blue-500 text-white">Envoyer</button>
+
+            <?php if(isset($_SESSION['success'])): ?>
+                <div class="text-green-500 text-center mb-4 border-2 border-green-500 bg-green-500/10 success rounded-lg p-2 relative">
+                    <?= $_SESSION['success'] ?> <i class="remove-error ms-auto fa-solid fa-xmark absolute top-1/2 -translate-y-1/2 right-2 cursor-pointer"></i>
+                </div>
+                <?php unset($_SESSION['success']); ?>
+            <?php endif; ?>
+                <div class="flex flex-col md:flex-row  md:gap-4">
+                    <div class="relative w-full mb-2">
+                        <i class="fa-regular fa-user absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                        <input type="text" name="name" id="name" placeholder="Votre nom"  class=" w-full pl-10 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-1 placeholder:font-semibold placeholder:text-gray-400 focus:ring-gray-300"/>
+                    </div>
+
+                    <div class="relative w-full mb-2">
+                        <i class="fa-regular fa-envelope absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                        <input type="email" name="email" id="email" placeholder="votre@email.com"  class=" w-full pl-10 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-1 placeholder:font-semibold placeholder:text-gray-400 focus:ring-gray-300"/>
+                    </div>
+                </div>
+
+                <div class="relative w-full mb-2">
+                        <i class="fa-regular fa-envelope absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                        <input type="text" name="subject" id="subject" placeholder="Sujet de votre message"  class=" w-full pl-10 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-1 placeholder:font-semibold placeholder:text-gray-400 focus:ring-gray-300"/>
+                </div>
+
+                <textarea name="message" id="message" placeholder="Votre message" rows="4"  class=" w-full pl-2 py-2  rounded-lg border border-gray-300 focus:outline-none focus:ring-1 placeholder:font-semibold placeholder:text-gray-400 focus:ring-gray-300"></textarea>
+
+                <button type="submit" class=" cursor-pointer m-auto p-2 px-6 rounded-lg bg-royal-blue-500 hover:bg-royal-blue-600 text-white mt-4">Envoyer <i class="ms-1 fa-solid fa-paper-plane"></i></button>
             </div>
 
-
-            
-
-        </div>
+        </form>
 
         
 

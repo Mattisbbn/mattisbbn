@@ -1,0 +1,24 @@
+RewriteEngine On
+
+# Rediriger toutes les requêtes vers index.php sauf pour les fichiers existants
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+# Autoriser les méthodes HTTP
+<Limit GET POST PUT DELETE>
+    Require all granted
+</Limit>
+
+# Sécurité : Empêcher l'accès aux fichiers sensibles
+<Files ".env">
+    Require all denied
+</Files>
+
+<Files "composer.json">
+    Require all denied
+</Files>
+
+<Files "composer.lock">
+    Require all denied
+</Files>

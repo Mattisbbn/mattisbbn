@@ -62,3 +62,18 @@ expandProjectButtons.forEach((button,index) => {
 
     
 });
+
+const removeError = document.querySelector(".remove-error")
+
+removeError?.addEventListener("click",()=>{
+    const error = document.querySelector(".error")
+    const success = document.querySelector(".success")
+    error?.remove()
+    success?.remove()
+})
+
+
+
+
+
+
