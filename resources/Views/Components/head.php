@@ -12,6 +12,7 @@
     <meta name='rating' content='general'>
     <meta name="keywords" content="Mattis Babin, Développeur web, Laravel, React, React Native, Next.js, Tailwind, Git, MariaDB, PHP, JavaScript, HTML, CSS">
 
+    <link rel="canonical" href="https://mattisbabin.fr" />
 
     <!-- Primary Meta Tags -->
     <title>Mattis Babin | Développeur web | Laravel & React</title>
