@@ -3,7 +3,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   root: 'resources',
-  publicDir: 'public',
+  publicDir: '../public',
   server: {
     port: 5173,
     strictPort: true,
@@ -20,8 +20,8 @@ export default defineConfig({
   ],
   build: {
     manifest: true,
-    outDir: '../public/build',
-    emptyOutDir: true,
+    outDir: '../build',
+    emptyOutDir: false,
     rollupOptions: {
       input: {
         main: 'resources/assets/js/main.js',
