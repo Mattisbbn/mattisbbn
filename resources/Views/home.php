@@ -126,27 +126,27 @@
             <div class="flex flex-wrap flex-row justify-center gap-4 mb-8">
         
                 <div class="px-6 py-4 flex items-center gap-2 neumorphism  rounded-full">
-                    <img src="assets/images/laravel.svg" alt="Laravel" class="w-6 h-6">
+                    <img src="assets/images/laravel.svg" alt="Logo compétence Mattis Babin : Laravel" class="w-6 h-6">
                     <span class="text-gray-700">Laravel</span>
                 </div>
         
                 <div class="px-6 py-4 flex items-center gap-2 neumorphism rounded-full ">
-                    <img src="assets/images/react.svg" alt="Laravel" class="w-6 h-6">
+                    <img src="assets/images/react.svg" alt="Logo compétence Mattis Babin : React" class="w-6 h-6">
                     <span class="text-gray-700">React</span>
                 </div>
 
                 <div class="px-6 py-4 flex items-center gap-2 neumorphism rounded-full ">
-                    <img src="assets/images/tailwindcss.svg" alt="Laravel" class="w-6 h-6">
+                    <img src="assets/images/tailwindcss.svg" alt="Logo compétence Mattis Babin : Tailwind" class="w-6 h-6">
                     <span class="text-gray-700">Tailwind</span>
                 </div>
 
                 <div class="px-6 py-4 flex items-center gap-2 neumorphism rounded-full ">
-                    <img src="assets/images/mariadb.svg" alt="Laravel" class="w-6 h-6">
+                    <img src="assets/images/mariadb.svg" alt="Logo compétence Mattis Babin : MariaDB" class="w-6 h-6">
                     <span class="text-gray-700">MariaDB</span>
                 </div>   
                 
                 <div class="px-6 py-4 flex items-center gap-2 neumorphism rounded-full ">
-                    <img src="assets/images/git.svg" alt="Laravel" class="w-6 h-6">
+                    <img src="assets/images/git.svg" alt="Logo compétence Mattis Babin : Git" class="w-6 h-6">
                     <span class="text-gray-700">Git</span>
                 </div>
 
@@ -162,12 +162,12 @@
         
                 
                 <div class="px-6 py-4 flex items-center gap-2 neumorphism rounded-full ">
-                    <img src="assets/images/nextjs.svg" alt="Laravel" class="w-6 h-6">
+                    <img src="assets/images/nextjs.svg" alt="Logo compétence Mattis Babin : Next.js" class="w-6 h-6">
                     <span class="text-gray-700">Next.js</span>
                 </div>
 
                 <div class="px-6 py-4 flex items-center gap-2 neumorphism rounded-full ">
-                    <img src="assets/images/react.svg" alt="Laravel" class="w-6 h-6">
+                    <img src="assets/images/react.svg" alt="Logo compétence Mattis Babin : React Native" class="w-6 h-6">
                     <span class="text-gray-700">React Native</span>
                 </div>
             </div>
