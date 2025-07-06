@@ -41,7 +41,7 @@
             <div class="border-l-6 border-royal-blue-500 relative ">
                 <span class="rounded-full h-[25px] w-[25px] top-[0px] left-[-16px] bg-royal-blue-500 absolute"></span>
                 <div class="ms-4 pb-2">
-                    <h1 class="font-bold text-xl mb-3">Lycée Saint Aubin La Salle</h1>
+                    <h3 class="font-bold text-xl mb-3">Lycée Saint Aubin La Salle</h3>
                     <p class="text-gray-400 mb-1.5 text-lg"><i class="fa-solid fa-graduation-cap w-8 text-xl"></i>BAC PRO systemes Numériques</p>
                     <p class="text-gray-400 mb-1.5 text-lg"><i class="fa-solid fa-location-dot w-8 text-xl"></i>Verrieres-sur-Anjou</p>
                     <p class="text-gray-400 mb-1.5 text-lg"><i class="fa-solid fa-calendar-days w-8 text-xl"></i>2020-2023</p>
@@ -51,7 +51,7 @@
             <div class="border-l-6 border-royal-blue-500 relative">
                 <span class="rounded-full h-[25px] w-[25px] top-[0px] left-[-16px] bg-royal-blue-500 absolute"></span>
                 <div class="ms-4 pb-2">
-                    <h1 class="font-bold text-xl mb-3">École Supérieure des Pays de Loire</h1>
+                    <h3 class="font-bold text-xl mb-3">École Supérieure des Pays de Loire</h3>
                     <p class="text-gray-400 mb-1.5 text-lg"><i class="fa-solid fa-graduation-cap w-8 text-xl"></i>BTS SIO SLAM</p>
                     <p class="text-gray-400 mb-1.5 text-lg"><i class="fa-solid fa-location-dot w-8 text-xl"></i>Belle-Beille</p>
                     <p class="text-gray-400 mb-1.5 text-lg"><i class="fa-solid fa-calendar-days w-8 text-xl"></i>2023-2025</p>
@@ -60,7 +60,7 @@
             <div class="border-l-6 border-royal-blue-200 relative">
                 <span class="rounded-full h-[25px] w-[25px] top-[0px] left-[-16px] bg-royal-blue-500 absolute"></span>
                 <div class="ms-4 pb-2">
-                    <h1 class="font-bold text-xl mb-3">MyDigitalSchool</h1>
+                    <h3 class="font-bold text-xl mb-3">MyDigitalSchool</h3>
                     <p class="text-gray-400 mb-1.5 text-lg"><i class="fa-solid fa-graduation-cap w-8 text-xl"></i>Bachelor CDA</p>
                     <p class="text-gray-400 mb-1.5 text-lg"><i class="fa-solid fa-location-dot w-8 text-xl"></i>Belle-Beille</p>
                     <p class="text-gray-400 mb-1.5 text-lg"><i class="fa-solid fa-calendar-days w-8 text-xl"></i>Septembre 2025</p>
@@ -73,7 +73,7 @@
             <div class="border-l-6 border-royal-blue-500 relative">
                 <span class="rounded-full h-[25px] w-[25px] top-[0px] left-[-16px] bg-royal-blue-500 absolute"></span>
                 <div class="ms-4 pb-2">
-                    <h1 class="font-bold text-xl mb-3">Electroniques Services</h1>
+                    <h3 class="font-bold text-xl mb-3">Electroniques Services</h3>
                     <p class="text-gray-400 mb-1.5 text-lg"><i class="fa-solid fa-suitcase w-8 text-xl"></i>Stage - Électronicien</p>
                     <p class="text-gray-400 mb-1.5 text-lg"><i class="fa-solid fa-location-dot w-8 text-xl"></i>Saint-Melaine-sur-Aubance</p>
                     <p class="text-gray-400 mb-1.5 text-lg"><i class="fa-solid fa-calendar-days w-8 text-xl"></i>Novembre 2022 - Janvier 2023 | Mai 2022</p>
@@ -84,7 +84,7 @@
             <div class="border-l-6 border-royal-blue-500 relative">
                 <span class="rounded-full h-[25px] w-[25px] top-[0px] left-[-16px] bg-royal-blue-500 absolute"></span>
                 <div class="ms-4 pb-2">
-                    <h1 class="font-bold text-xl mb-3">My Micro</h1>
+                    <h3 class="font-bold text-xl mb-3">My Micro</h3>
                     <p class="text-gray-400 mb-1.5 text-lg"><i class="fa-solid fa-suitcase w-8 text-xl"></i>Alternance - Technicien informatique</p>
                     <p class="text-gray-400 mb-1.5 text-lg"><i class="fa-solid fa-location-dot w-8 text-xl"></i>Thouarcé / Angers</p>
                     <p class="text-gray-400 mb-1.5 text-lg"><i class="fa-solid fa-calendar-days w-8 text-xl"></i>Septembre 2023 </p>
@@ -94,7 +94,7 @@
             <div class="border-l-6 border-royal-blue-500 relative">
                 <span class="rounded-full h-[25px] w-[25px] top-[0px] left-[-16px] bg-royal-blue-500 absolute"></span>
                 <div class="ms-4 pb-2">
-                    <h1 class="font-bold text-xl mb-3">Leclerc Drive</h1>
+                    <h3 class="font-bold text-xl mb-3">Leclerc Drive</h3>
                     <p class="text-gray-400 mb-1.5 text-lg"><i class="fa-solid fa-suitcase w-8 text-xl"></i>Job étudiant - Employé drive</p>
                     <p class="text-gray-400 mb-1.5 text-lg"><i class="fa-solid fa-location-dot w-8 text-xl"></i>Pont-de-Cé</p>
                     <p class="text-gray-400 mb-1.5 text-lg"><i class="fa-solid fa-calendar-days w-8 text-xl"></i>Mai 2024 - juillet 2024 </p>
@@ -104,7 +104,7 @@
             <div class="border-l-6 border-royal-blue-300 relative">
                 <span class="rounded-full h-[25px] w-[25px] top-[0px] left-[-16px] bg-royal-blue-500 absolute"></span>
                 <div class="ms-4 pb-2">
-                    <h1 class="font-bold text-xl mb-3">Akoufen</h1>
+                    <h3 class="font-bold text-xl mb-3">Akoufen</h3>
                     <p class="text-gray-400 mb-1.5 text-lg"><i class="fa-solid fa-suitcase w-8 text-xl"></i>Alternance - Développeur web</p>
                     <p class="text-gray-400 mb-1.5 text-lg"><i class="fa-solid fa-location-dot w-8 text-xl"></i>Brissac-Quincé</p>
                     <p class="text-gray-400 mb-1.5 text-lg"><i class="fa-solid fa-calendar-days w-8 text-xl"></i>Septembre 2024-Actuellement </p>

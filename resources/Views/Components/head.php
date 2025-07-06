@@ -16,7 +16,7 @@
     <!-- Primary Meta Tags -->
     <title>Mattis Babin | Développeur web | Laravel & React</title>
     <meta name="title" content="Mattis Babin | Développeur web | Laravel & React" />
-    <meta name="description" content="Étudiant en Bachelor CDA dès septembre, je recherche une alternance en développement web. Spécialisé Laravel & React, je développe des projets modernes en entreprise et en perso." />
+    <meta name="description" content="Étudiant en Bachelor CDA dès septembre, je recherche une alternance en développement web. Spécialisé Laravel & React." />
     <meta name="canonical" content="https://mattisbabin.fr" />
     <meta name="robots" content="index, follow" />
 
@@ -24,14 +24,14 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="mattisbabin.fr" />
     <meta property="og:title" content="Mattis Babin | Développeur web | Laravel & React" />
-    <meta property="og:description" content="Étudiant en Bachelor CDA dès septembre, je recherche une alternance en développement web. Spécialisé Laravel & React, je développe des projets modernes en entreprise et en perso." />
+    <meta property="og:description" content="Étudiant en Bachelor CDA dès septembre, je recherche une alternance en développement web. Spécialisé Laravel & React." />
     <meta property="og:image" content="https://mattisbabin.fr/assets/images/meta-banner.png" />
 
     <!-- X (Twitter) -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="mattisbabin.fr" />
     <meta property="twitter:title" content="Mattis Babin | Développeur web | Laravel & React" />
-    <meta property="twitter:description" content="Étudiant en Bachelor CDA dès septembre, je recherche une alternance en développement web. Spécialisé Laravel & React, je développe des projets modernes en entreprise et en perso." />
+    <meta property="twitter:description" content="Étudiant en Bachelor CDA dès septembre, je recherche une alternance en développement web. Spécialisé Laravel & React." />
     <meta property="twitter:image" content="https://mattisbabin.fr/assets/images/meta-banner.png" />
 
     <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-96x96.png" sizes="96x96" />
@@ -40,18 +40,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Mattis Babin | Développeur web" />
     <link rel="manifest" href="/assets/images/favicon/site.webmanifest" />
-
-
-
-
-
-
-
-
-
-
-
-
     <?= vite('main.js') ?>
 
     <?php if(isset($js)): ?>
