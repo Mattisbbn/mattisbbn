@@ -22,10 +22,10 @@
         <p class="text-gray-800 text-xl sm:text-2xl ">Je m'appelle Mattis, j'ai 19 ans je suis actuellement en alternance chez Akoufen et je viens d'obtenir mon BTS SIO option SLAM avec la mention assez bien. Passionné par le développement web, je suis curieux et touche-à-tout.
             <br><br>
 
-            Je poursuis en Bachelor Concepteur Développeur d’Applications à la rentrée 2025 et je recherche une alternance sur Angers dès septembre 2025.
+            Je poursuis en Bachelor Concepteur Développeur d'Applications à la rentrée 2025 et je recherche une alternance sur Angers dès septembre 2025.
 
             <br><br>
-            Je suis à l’aise aussi bien avec Laravel et ReactJS que sur des projets en PHP natif. Actuellement, j’apprends Next.js et j’ai déjà eu l’occasion de développer des projets complets, du back-end au front-end. Curieux, motivé et sérieux, je suis toujours prêt à découvrir de nouvelles technologies.
+            Je suis à l'aise aussi bien avec Laravel et ReactJS que sur des projets en PHP natif. Actuellement, j'apprends Next.js et j'ai déjà eu l'occasion de développer des projets complets, du back-end au front-end. Curieux, motivé et sérieux, je suis toujours prêt à découvrir de nouvelles technologies.
         </p>
     </section>
 
@@ -179,7 +179,6 @@
     <section class="flex flex-col h-screen  mx-auto introduction justify-center align-middle ">
         <h2 class="text-4xl sm:text-5xl text-center font-bold text-gray-800   mb-12">Mes projets</h2>
 
-
         <div class="flex flex-wrap justify-center gap-4">
 
             <div class="project-card w-10/12 sm:w-1/2 md:w-3/6 lg:w-3/8 xl:w-4/13 2xl:w-3/13 neumorphism rounded-lg  overflow-hidden">
@@ -188,11 +187,11 @@
                     <h3 class="text-xl font-bold text-gray-800 mb-2">Click & Eat</h3>
 
                
-                    <p class="text-gray-600 line-clamp-3 project-description"><b>Introduction :</b> Ce projet avait pour but de concevoir une application web de type “Click & Collect”, appliquée ici au domaine de la restauration, sous le nom fictif de Click&Eat. L’application devait permettre aux clients de réserver une table dans un restaurant, tout en ayant la possibilité de passer leur commande à l’avance, afin de réduire le temps d’attente une fois sur place.
+                    <p class="text-gray-600 line-clamp-3 project-description"><b>Introduction :</b> Ce projet avait pour but de concevoir une application web de type "Click & Collect", appliquée ici au domaine de la restauration, sous le nom fictif de Click&Eat. L'application devait permettre aux clients de réserver une table dans un restaurant, tout en ayant la possibilité de passer leur commande à l'avance, afin de réduire le temps d'attente une fois sur place.
                     <br><br>
 
 
-                    <b>Contexte :</b> Ce projet a été réalisé dans le cadre de mon BTS SIO option SLAM. Nous avons eu pour objectif de concevoir une application web de type “Click & Collect”, appliquée ici au domaine de la restauration, sous le nom fictif de Click&Eat. L’application devait permettre aux clients de réserver une table dans un restaurant, tout en ayant la possibilité de passer leur commande à l’avance, afin de réduire le temps d’attente une fois sur place.
+                    <b>Contexte :</b> Ce projet a été réalisé dans le cadre de mon BTS SIO option SLAM. Nous avons eu pour objectif de concevoir une application web de type "Click & Collect", appliquée ici au domaine de la restauration, sous le nom fictif de Click&Eat. L'application devait permettre aux clients de réserver une table dans un restaurant, tout en ayant la possibilité de passer leur commande à l'avance, afin de réduire le temps d'attente une fois sur place.
                     <br><br>
 
                     <b>Technologies utilisées :</b> Laravel, Tailwind, Bootstrap, MariaDB, Git, Stripe
@@ -217,14 +216,7 @@
                 </div>
             </div>
 
-
-            
-
         </div>
-
-        
-
-      
 
     </section>
 
@@ -233,24 +225,24 @@
         <h2 class="text-4xl sm:text-5xl text-center font-bold text-gray-800   mb-12">Me contacter</h2>
 
         <form action="/send-mail" id="contact" method="POST" class="flex flex-wrap  justify-center gap-4">
-<input type="hidden" name="CSRF_TOKEN" value="<?= $_SESSION['CSRF_TOKEN'] ?>">
+            <input type="hidden" name="CSRF_TOKEN" value="<?= $_SESSION['CSRF_TOKEN'] ?>">
 
-            <div class=" rounded-xl p-8 shadow-[5px_5px_23px_-7px_rgba(0,_0,_0,_0.2)] bg-gray-100/50 flex flex-col">
-        
-            <?php if(isset($_SESSION['error'])): ?>
-                <div class="text-red-500 text-center mb-4 border-2 border-red-500 bg-red-500/10 error rounded-lg p-2 relative">
-                    <?= $_SESSION['error'] ?> <i class="remove-error ms-auto fa-solid fa-xmark absolute top-1/2 -translate-y-1/2 right-2 cursor-pointer"></i>
-                </div>
-                <?php unset($_SESSION['error']); ?>
-            <?php endif; ?>
+            <div class="rounded-xl p-8 flex flex-col neumorphism">
+            
+                <?php if(isset($_SESSION['error'])): ?>
+                    <div class="text-red-500 text-center mb-4 border-2 border-red-500 bg-red-500/10 error rounded-lg p-2 relative">
+                        <?= $_SESSION['error'] ?> <i class="remove-error ms-auto fa-solid fa-xmark absolute top-1/2 -translate-y-1/2 right-2 cursor-pointer"></i>
+                    </div>
+                    <?php unset($_SESSION['error']); ?>
+                <?php endif; ?>
 
 
-            <?php if(isset($_SESSION['success'])): ?>
-                <div class="text-green-500 text-center mb-4 border-2 border-green-500 bg-green-500/10 success rounded-lg p-2 relative">
-                    <?= $_SESSION['success'] ?> <i class="remove-error ms-auto fa-solid fa-xmark absolute top-1/2 -translate-y-1/2 right-2 cursor-pointer"></i>
-                </div>
-                <?php unset($_SESSION['success']); ?>
-            <?php endif; ?>
+                <?php if(isset($_SESSION['success'])): ?>
+                    <div class="text-green-500 text-center mb-4 border-2 border-green-500 bg-green-500/10 success rounded-lg p-2 relative">
+                        <?= $_SESSION['success'] ?> <i class="remove-error ms-auto fa-solid fa-xmark absolute top-1/2 -translate-y-1/2 right-2 cursor-pointer"></i>
+                    </div>
+                    <?php unset($_SESSION['success']); ?>
+                <?php endif; ?>
                 <div class="flex flex-col md:flex-row  md:gap-4">
                     <div class="relative w-full mb-2">
                         <i class="fa-regular fa-user absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
@@ -268,21 +260,152 @@
                         <input type="text" name="subject" id="subject" placeholder="Sujet de votre message"  class=" w-full pl-10 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-1 placeholder:font-semibold placeholder:text-gray-400 focus:ring-gray-300"/>
                 </div>
 
-                <textarea name="message" id="message" placeholder="Votre message" rows="4"  class=" w-full pl-2 py-2  rounded-lg border border-gray-300 focus:outline-none focus:ring-1 placeholder:font-semibold placeholder:text-gray-400 focus:ring-gray-300"></textarea>
+                <textarea name="message" id="message" placeholder="Votre message" rows="5"  class=" w-full pl-2 py-2  rounded-lg border border-gray-300 focus:outline-none focus:ring-1 placeholder:font-semibold placeholder:text-gray-400 focus:ring-gray-300"></textarea>
 
                 <button type="submit" class=" cursor-pointer m-auto p-2 px-6 rounded-lg bg-royal-blue-500 hover:bg-royal-blue-600 text-white mt-4">Envoyer <i class="ms-1 fa-solid fa-paper-plane"></i></button>
             </div>
 
         </form>
-
-        
-
-      
-
     </section>
-</main>
 
+</main>
+<footer class="text-sm text-gray-500 text-center mt-8 mb-4">
+    <p>© <?= date('Y') ?> Mattis Babin. Tous droits réservés.</p>
+    <button onclick="openMentionsLegales()" class="underline hover:text-gray-700 cursor-pointer">Mentions légales</button>
+</footer>
+
+
+<div id="mentionsLegalesModal" class="fixed inset-0 bg-black/20 hidden z-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+        <!-- Header du modal -->
+        <div class="flex justify-between items-center p-6 border-b border-gray-200">
+            <h2 class="text-2xl font-bold text-bright-gray-900">Mentions légales</h2>
+            <button onclick="closeMentionsLegales()" class="text-gray-400 hover:text-gray-600 text-2xl font-bold">
+                <i class="fa-solid fa-times"></i>
+            </button>
+        </div>
+        
+        <!-- Contenu du modal -->
+        <div class="p-6">
+            <!-- Éditeur du site -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-bright-gray-600 mb-4 border-b border-gray-200 pb-2">
+                    <i class="fa-solid fa-user mr-2"></i>Éditeur du site
+                </h3>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <p class="text-bright-gray-900 mb-2">
+                        <span class="font-bold text-lg">Mattis Babin</span>
+                    </p>
+                    <p class="text-bright-gray-700 mb-2">
+                        <i class="fa-solid fa-envelope mr-2"></i>
+                        <strong>Email :</strong> 
+                        <a href="mailto:mattisbbnpro@gmail.com" class="text-royal-blue-500 hover:text-royal-blue-700 underline">
+                            mattisbbnpro@gmail.com
+                        </a>
+                    </p>
+                    <p class="text-sm text-gray-600 italic">
+                        Ce site est un portfolio personnel sans but commercial.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Hébergeur -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-bright-gray-600 mb-4 border-b border-gray-200 pb-2">
+                    <i class="fa-solid fa-server mr-2"></i>Hébergeur
+                </h3>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <p class="text-bright-gray-900 mb-2">
+                        <span class="font-bold text-lg">Hostbrr</span>
+                    </p>
+                    <div class="space-y-2 text-bright-gray-700">
+                        <p>
+                            <i class="fa-solid fa-envelope mr-2"></i>
+                            <strong>Email :</strong> 
+                            <a href="mailto:contact@hostbrr.com" class="text-royal-blue-500 hover:text-royal-blue-700 underline">
+                                contact@hostbrr.com
+                            </a>
+                        </p>
+                        <p>
+                            <i class="fa-solid fa-globe mr-2"></i>
+                            <strong>Site :</strong> 
+                            <a href="https://www.hostbrr.com" target="_blank" class="text-royal-blue-500 hover:text-royal-blue-700 underline">
+                                www.hostbrr.com
+                            </a>
+                        </p>
+                        <p>
+                            <i class="fa-solid fa-location-dot mr-2"></i>
+                            <strong>Adresse :</strong> 4 Place des États-Unis, 78180 Montigny-le-Bretonneux, France
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Données personnelles -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-bright-gray-600 mb-4 border-b border-gray-200 pb-2">
+                    <i class="fa-solid fa-shield-halved mr-2"></i>Protection des données personnelles
+                </h3>
+                <div class="bg-gray-50 p-4 rounded-lg space-y-3">
+                    <div class="border-l-4 border-royal-blue-500 pl-4">
+                        <h4 class="font-semibold text-bright-gray-800 mb-2">Utilisation des données</h4>
+                        <p class="text-bright-gray-700 text-sm">
+                            Les données envoyées via le formulaire de contact (nom, e-mail, message) sont utilisées 
+                            <strong>uniquement</strong> pour répondre à votre message. Elles ne sont ni stockées, 
+                            ni transmises à des tiers.
+                        </p>
+                    </div>
+                    
+                    <div class="border-l-4 border-green-500 pl-4">
+                        <h4 class="font-semibold text-bright-gray-800 mb-2">Vos droits</h4>
+                        <p class="text-bright-gray-700 text-sm">
+                            Conformément à la loi « Informatique et Libertés » et au RGPD, vous pouvez :
+                        </p>
+                        <ul class="text-bright-gray-700 text-sm mt-2 ml-4 space-y-1">
+                            <li>• Demander l'accès à vos données</li>
+                            <li>• Demander la rectification de vos données</li>
+                            <li>• Demander la suppression de vos données</li>
+                            <li>• Vous opposer au traitement de vos données</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-blue-50 p-3 rounded border border-blue-200">
+                        <p class="text-blue-800 text-sm">
+                            <i class="fa-solid fa-info-circle mr-2"></i>
+                            Pour exercer vos droits, contactez-moi à 
+                            <a href="mailto:mattisbbnpro@gmail.com" class="text-royal-blue-500 hover:text-royal-blue-700 underline font-semibold">
+                                mattisbbnpro@gmail.com
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cookies -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-bright-gray-600 mb-4 border-b border-gray-200 pb-2">
+                    <i class="fa-solid fa-cookie-bite mr-2"></i>Cookies
+                </h3>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <p class="text-bright-gray-700 text-sm">
+                        Ce site n'utilise pas de cookies de tracking. Seuls les cookies techniques 
+                        nécessaires au fonctionnement du site peuvent être utilisés.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Dernière mise à jour -->
+            <div class="text-center text-sm text-gray-500 border-t border-gray-200 pt-4">
+                <p>
+                    <i class="fa-solid fa-calendar mr-1"></i>
+                    Dernière mise à jour : 06/07/2025
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
 
 </body>
-
 </html>

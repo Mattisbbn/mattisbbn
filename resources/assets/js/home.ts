@@ -72,6 +72,42 @@ removeError?.addEventListener("click",()=>{
     success?.remove()
 })
 
+// Modal Mentions Légales
+function openMentionsLegales(): void {
+    const modal = document.getElementById('mentionsLegalesModal')
+    if (modal) {
+        modal.classList.remove('hidden')
+        document.body.style.overflow = 'hidden' // Empêche le scroll de la page
+    }
+}
+
+function closeMentionsLegales(): void {
+    const modal = document.getElementById('mentionsLegalesModal')
+    if (modal) {
+        modal.classList.add('hidden')
+        document.body.style.overflow = 'auto' // Remet le scroll
+    }
+}
+
+// Fermer le modal en cliquant sur l'arrière-plan
+const mentionsLegalesModal = document.getElementById('mentionsLegalesModal')
+mentionsLegalesModal?.addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeMentionsLegales()
+    }
+})
+
+// Fermer le modal avec la touche Échap
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeMentionsLegales()
+    }
+})
+
+
+;(window as any).openMentionsLegales = openMentionsLegales
+;(window as any).closeMentionsLegales = closeMentionsLegales
+
 
 
 
