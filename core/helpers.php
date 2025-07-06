@@ -38,12 +38,12 @@ function vite($entry) {
         $tags = '';
         if (isset($manifest[$entry]['css'])) {
             foreach ($manifest[$entry]['css'] as $css) {
-                $tags .= "<link rel=\"stylesheet\" href=\"/build/$css\">\n";
+                $tags .= "<link rel=\"stylesheet\" href=\"/assets/$css\">\n";
             }
         }
         $file = $manifest[$entry]['file'] ?? null;
         if ($file) {
-            $tags .= "<script type=\"module\" src=\"/build/$file\"></script>\n";
+            $tags .= "<script type=\"module\" src=\"/assets/$file\"></script>\n";
         }
         return $tags;
     }else{
