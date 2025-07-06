@@ -1,10 +1,11 @@
 RewriteEngine On
 
+# Servir directement les fichiers .txt et .xml s'ils existent
+RewriteRule \.(txt|xml)$ - [L]
+
 # Rediriger toutes les requêtes vers index.php sauf pour les fichiers existants
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-# Exclure les fichiers .txt et .xml de la redirection
-RewriteCond %{REQUEST_URI} !\.(txt|xml)$
 RewriteRule ^(.*)$ index.php [QSA,L]
 
 # Autoriser les méthodes HTTP
