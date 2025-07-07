@@ -12,13 +12,18 @@
     <meta name='rating' content='general'>
     <meta name="keywords" content="Mattis Babin, Développeur web, Laravel, React, React Native, Next.js, Tailwind, Git, MariaDB, PHP, JavaScript, HTML, CSS">
 
-    <link rel="canonical" href="https://mattisbabin.fr" />
+    <?php
+    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https" : "http";
+    $host = $_SERVER['HTTP_HOST'];
+    $uri = $_SERVER['REQUEST_URI'] ?? '';
+    $canonical = $protocol . '://' . $host . $uri;
+    ?>
+    <link rel="canonical" href="<?= $canonical ?>" />
 
     <!-- Primary Meta Tags -->
     <title>Mattis Babin | Développeur web | Laravel & React</title>
     <meta name="title" content="Mattis Babin | Développeur web | Laravel & React" />
     <meta name="description" content="Étudiant en Bachelor CDA dès septembre, je recherche une alternance en développement web. Spécialisé Laravel & React." />
-    <meta name="canonical" content="https://mattisbabin.fr" />
     <meta name="robots" content="index, follow" />
 
     <!-- Open Graph / Facebook -->
