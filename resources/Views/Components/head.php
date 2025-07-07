@@ -48,7 +48,7 @@
     <link rel="manifest" href="/assets/images/favicon/site.webmanifest" />
 
     <link rel="preload" href="/assets/fonts/outfit/outfit-v14-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
-    <link rel="preload" href="/assets/fonts/outfit/outfit-v14-latin-400.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="/assets/fonts/outfit/outfit-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
     <link rel="preload" href="/assets/fonts/outfit/outfit-v14-latin-600.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
 
     <?= vite('main.js') ?>
