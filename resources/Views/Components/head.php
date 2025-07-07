@@ -46,6 +46,11 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Mattis Babin | Développeur web" />
     <link rel="manifest" href="/assets/images/favicon/site.webmanifest" />
+
+    <link rel="preload" href="/assets/fonts/outfit/outfit-v14-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="/assets/fonts/outfit/outfit-v14-latin-400.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="/assets/fonts/outfit/outfit-v14-latin-600.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+
     <?= vite('main.js') ?>
 
     <?php if(isset($js)): ?>
