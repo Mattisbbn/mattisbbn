@@ -10,7 +10,7 @@
         <h2 class="text-2xl md:text-3xl text-bright-gray-600 mb-3">Développeur Web</h2>
         <div class="text-xl font-semibold mt-4 flex flex-wrap justify-center">
             <a draggable="false" target="_blank" href="https://github.com/mattisbbn" class="cursor-pointer text-gray-700 border-gray-700 group p-2 border-2 rounded-lg me-2 mb-2 hover:border-royal-blue-500 hover:bg-royal-blue-500 hover:text-white">GitHub <i class="fa-brands fa-github group-hover:text-white"></i></a>
-            <a draggable="false" target="_blank" href="/documents/CV.pdf" class="cursor-pointer text-gray-700 border-gray-700 group p-2 border-2 rounded-lg me-2 mb-2 hover:border-royal-blue-500 hover:bg-royal-blue-500 hover:text-white">Mon CV <i class="fa-solid fa-file-pdf group-hover:text-white"></i></a>
+            <a draggable="false" target="_blank" href="/assets/CV.pdf" class="cursor-pointer text-gray-700 border-gray-700 group p-2 border-2 rounded-lg me-2 mb-2 hover:border-royal-blue-500 hover:bg-royal-blue-500 hover:text-white">Mon CV <i class="fa-solid fa-file-pdf group-hover:text-white"></i></a>
             <a draggable="false" target="_blank" href="https://www.linkedin.com/in/mattisbbn/" class="cursor-pointer text-gray-700 border-gray-700 group p-2 border-2 rounded-lg me-2 mb-2 hover:border-royal-blue-500 hover:bg-royal-blue-500 hover:text-white">LinkedIn <i class="fa-brands fa-linkedin group-hover:text-white"></i></a>
         </div>
         <div class="mouse absolute bottom-10 left-1/2"></div>
