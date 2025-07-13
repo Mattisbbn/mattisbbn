@@ -25,7 +25,7 @@
             Je poursuis en Bachelor Concepteur Développeur d'Applications à la rentrée 2025 et je recherche une alternance sur Angers dès septembre 2025.
 
             <br><br>
-            Je suis à l'aise aussi bien avec Laravel et ReactJS que sur des projets en PHP natif. Actuellement, j'apprends Next.js et j'ai déjà eu l'occasion de développer des projets complets, du back-end au front-end. Curieux, motivé et sérieux, je suis toujours prêt à découvrir de nouvelles technologies.
+            Je suis à l'aise aussi bien avec Laravel et Vue.js que sur des projets en PHP natif. Actuellement, j'apprends Next.js et j'ai déjà eu l'occasion de développer des projets complets, du back-end au front-end. Curieux, motivé et sérieux, je suis toujours prêt à découvrir de nouvelles technologies.
         </p>
     </section>
 
@@ -131,8 +131,8 @@
                 </div>
         
                 <div class="px-6 py-4 flex items-center gap-2 neumorphism rounded-full ">
-                    <img src="assets/images/react.svg" alt="Logo compétence Mattis Babin : React" class="w-6 h-6">
-                    <span class="text-gray-700">React</span>
+                    <img src="assets/images/vue.svg" alt="Logo compétence Mattis Babin : Vue.js" class="w-6 h-6">
+                    <span class="text-gray-700">Vue.js</span>
                 </div>
 
                 <div class="px-6 py-4 flex items-center gap-2 neumorphism rounded-full ">
@@ -167,8 +167,8 @@
                 </div>
 
                 <div class="px-6 py-4 flex items-center gap-2 neumorphism rounded-full ">
-                    <img src="assets/images/react.svg" alt="Logo compétence Mattis Babin : React Native" class="w-6 h-6">
-                    <span class="text-gray-700">React Native</span>
+                    <img src="assets/images/react.svg" alt="Logo compétence Mattis Babin : React" class="w-6 h-6">
+                    <span class="text-gray-700">React</span>
                 </div>
             </div>
         </div>
