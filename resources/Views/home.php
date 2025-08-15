@@ -179,7 +179,7 @@
     <section class="flex flex-col h-screen  mx-auto introduction justify-center align-middle ">
         <h2 class="text-4xl sm:text-5xl text-center font-bold text-gray-800   mb-12">Mes projets</h2>
 
-        <div class="flex flex-wrap justify-center gap-4">
+        <div class="flex flex-wrap justify-center gap-6">
 
             <div class="project-card w-10/12 sm:w-1/2 md:w-3/6 lg:w-3/8 xl:w-4/13 2xl:w-3/13 neumorphism rounded-lg  overflow-hidden">
                 <img src="assets/images/clickneat.webp" alt="Interface du site Click & Eat, application web de commande de repas développée par Mattis Babin" class="w-full object-cover rounded-t-lg">
@@ -207,6 +207,41 @@
                 <a href="https://clickneat.mattisbabin.fr/" target="_blank" class="text-gray-600 mb-2 mx-2">Projet <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
 
                 <a href="https://github.com/mattisbbn/clickneat" target="_blank" class="text-gray-600 mb-2 ms-2">Github <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+               
+
+
+
+                  
+
+                </div>
+            </div>
+
+            <div class="project-card w-10/12 sm:w-1/2 md:w-3/6 lg:w-3/8 xl:w-4/13 2xl:w-3/13 neumorphism rounded-lg  overflow-hidden">
+                <img src="assets/images/ovnyl.webp" alt="Landpage du site web OVnyl, développée par Mattis Babin chez Akoufen." class="w-full object-cover rounded-t-lg">
+                <div class="p-4">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">OVnyl</h3>
+
+               
+                    <p class="text-gray-600 line-clamp-3 project-description"><b>Introduction :</b> Le projet Ovnyl avait pour but de concevoir une refonte complète d’un site e-commerce existant, en améliorant à la fois la sécurité, la maintenabilité et l’expérience utilisateur. L’objectif était de moderniser un site initialement développé en PHP 5 avec de nombreuses dépendances dépréciées et vulnérables, afin de le rendre plus stable et plus facile à maintenir.
+                    <br><br>
+
+
+                    <b>Contexte :</b> Ce projet a été réalisé dans le cadre de mon alternance chez Akoufen, pour un client réel possédant un site e-commerce. Le client souhaitait initialement uniquement une refonte graphique, mais j’ai proposé et mis en place une refonte complète du site, afin de renforcer la sécurité et la maintenabilité, tout en conservant une stack technique simple et adaptée à l’environnement de travail de l’équipe.
+                    <br><br>
+
+                    <b>Technologies utilisées :</b> PHP, MySQL, Bootstrap, JavaScript, Git
+
+                </p>
+
+               
+
+
+                <button class=" mt-2 bg-royal-blue-500 text-white px-3 py-1 rounded-full expand-project-button cursor-pointer"> <i class="fa-solid fa-arrow-up-right-from-square"></i> En savoir plus</button>
+
+                   
+                <a href="https://www.ovnyl.com" target="_blank" class="text-gray-600 mb-2 mx-2">Projet <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+
+                
                
 
 
