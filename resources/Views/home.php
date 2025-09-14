@@ -176,12 +176,12 @@
     </section>
 
 
-    <section class="flex flex-col h-screen  mx-auto introduction justify-center align-middle ">
+    <section class="flex flex-col min-h-screen  mx-auto introduction justify-center align-middle ">
         <h2 class="text-4xl sm:text-5xl text-center font-bold text-gray-800   mb-12">Mes projets</h2>
 
         <div class="flex flex-wrap justify-center gap-6">
 
-            <div class="project-card w-10/12 sm:w-1/2 md:w-3/6 lg:w-3/8 xl:w-4/13 2xl:w-3/13 neumorphism rounded-lg  overflow-hidden">
+            <div class="project-card flex flex-col self-start w-10/12 sm:w-1/2 md:w-3/6 lg:w-3/8 xl:w-4/13 2xl:w-3/13 neumorphism rounded-lg overflow-hidden">
                 <img src="assets/images/clickneat.webp" alt="Interface du site Click & Eat, application web de commande de repas développée par Mattis Babin" class="w-full object-cover rounded-t-lg">
                 <div class="p-4">
                     <h3 class="text-xl font-bold text-gray-800 mb-2">Click & Eat</h3>
@@ -216,7 +216,7 @@
                 </div>
             </div>
 
-            <div class="project-card w-10/12 sm:w-1/2 md:w-3/6 lg:w-3/8 xl:w-4/13 2xl:w-3/13 neumorphism rounded-lg  overflow-hidden">
+            <div class="project-card flex flex-col self-start w-10/12 sm:w-1/2 md:w-3/6 lg:w-3/8 xl:w-4/13 2xl:w-3/13 neumorphism rounded-lg  overflow-hidden">
                 <img src="assets/images/ovnyl.webp" alt="Landpage du site web OVnyl, développée par Mattis Babin chez Akoufen." class="w-full object-cover rounded-t-lg">
                 <div class="p-4">
                     <h3 class="text-xl font-bold text-gray-800 mb-2">OVnyl</h3>
@@ -236,18 +236,42 @@
                
 
 
-                <button class=" mt-2 bg-royal-blue-500 text-white px-3 py-1 rounded-full expand-project-button cursor-pointer"> <i class="fa-solid fa-arrow-up-right-from-square"></i> En savoir plus</button>
+                    <button class=" mt-2 bg-royal-blue-500 text-white px-3 py-1 rounded-full expand-project-button cursor-pointer"> <i class="fa-solid fa-arrow-up-right-from-square"></i> En savoir plus</button>
 
                    
-                <a href="https://www.ovnyl.com" target="_blank" class="text-gray-600 mb-2 mx-2">Projet <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <a href="https://www.ovnyl.com" target="_blank" class="text-gray-600 mb-2 mx-2">Projet <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
 
-                
+            <div class="project-card flex flex-col self-start w-10/12 sm:w-1/2 md:w-3/6 lg:w-3/8 xl:w-4/13 2xl:w-3/13 neumorphism rounded-lg  overflow-hidden">
+                <img src="assets/images/lebontrou.webp" alt="Landpage du site web OVnyl, développée par Mattis Babin chez Akoufen." class="w-full object-cover rounded-t-lg">
+                <div class="p-4">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">LeBonTrou</h3>
+
+               
+                    <p class="text-gray-600 line-clamp-3 project-description"><b>Introduction :</b> Ce projet avait pour but de concevoir un site web volontairement absurde, dans le cadre d'un projet de cours lors du Bachelor CDA. L'objectif était de créer un site qui n'a aucun sens, en explorant librement notre créativité sur deux jours de travail.
+                    <br><br>
+
+
+                    <b>Contexte :</b> Ce projet a été réalisé sur deux journées de cours, en binôme. L'idée était de concevoir un site original et décalé, sans contrainte de logique ni d'utilité réelle. Le site introduit une monnaie virtuelle totalement absurde, nommée HLC, dont la valeur est calculée selon la formule suivante :<br><br>
+                    
+                    <span class="font-mono bg-white/80 inline-block p-2 rounded-lg text-sm">(((PIB moyen par habitant du Soudan du Sud × Vitesse du vent à Saint-Rémy-en-Bouzemont-Saint-Genest-et-Isson) ÷ Taille moyenne des trous de serrures) ÷ Nombre de hotdogs mangés aux États-Unis le 4 juillet lors de la fête nationale) ÷ 1 000 000</span>
+
+                    <br><br>
+
+                    <b>Technologies utilisées :</b> Laravel, Tailwind, MariaDB, Github
+
+                </p>
+
                
 
 
+                    <button class=" mt-2 bg-royal-blue-500 text-white px-3 py-1 rounded-full expand-project-button cursor-pointer"> <i class="fa-solid fa-arrow-up-right-from-square"></i> En savoir plus</button>
 
-                  
+                   
+                    <a href="https://lebontrou.mattisbabin.fr/" target="_blank" class="text-gray-600 mb-2 mx-2">Projet <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
 
+                    <a href="https://github.com/mattisbbn/lebontrou" target="_blank" class="text-gray-600 mb-2 ms-2">Github <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
 
@@ -351,26 +375,26 @@
                 </h3>
                 <div class="bg-gray-50 p-4 rounded-lg">
                     <p class="text-bright-gray-900 mb-2">
-                        <span class="font-bold text-lg">Hostbrr</span>
+                        <span class="font-bold text-lg">OVH</span>
                     </p>
                     <div class="space-y-2 text-bright-gray-700">
                         <p>
                             <i class="fa-solid fa-envelope mr-2"></i>
                             <strong>Email :</strong> 
-                            <a href="mailto:contact@hostbrr.com" class="text-royal-blue-500 hover:text-royal-blue-700 underline">
-                                contact@hostbrr.com
+                            <a href="mailto:contact@ovh.com" class="text-royal-blue-500 hover:text-royal-blue-700 underline">
+                                contact@ovh.com
                             </a>
                         </p>
                         <p>
                             <i class="fa-solid fa-globe mr-2"></i>
                             <strong>Site :</strong> 
                             <a href="https://www.hostbrr.com" target="_blank" class="text-royal-blue-500 hover:text-royal-blue-700 underline">
-                                www.hostbrr.com
+                                www.ovh.com
                             </a>
                         </p>
                         <p>
                             <i class="fa-solid fa-location-dot mr-2"></i>
-                            <strong>Adresse :</strong> 4 Place des États-Unis, 78180 Montigny-le-Bretonneux, France
+                            <strong>Adresse :</strong> 2, rue Kellermann, 59100 Roubaix, France
                         </p>
                     </div>
                 </div>
