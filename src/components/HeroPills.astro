@@ -1,0 +1,78 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const { icon, text, href } = Astro.props;
+---
+
+<a href={href} target="_blank" 
+class="hero-pill text-bright-gray-900 text-center font-semibold flex space-x-2 bg-gray-50 border-2 px-3 py-2 rounded-xl cursor-pointer">
+    <Icon name={icon} class="text-2xl" />
+    <p class="text-xl">{text}</p>
+</a>
+
+<script>
+  import { gsap } from 'gsap';
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    const pills = document.querySelectorAll('.hero-pill');
+    
+    pills.forEach(pill => {
+      pill.addEventListener('mouseenter', () => {
+        gsap.to(pill, {
+          scale: 1.05,
+          rotation: 2,
+ 
+          color: '#6a63f1',
+          boxShadow: '0 10px 25px rgba(106, 99, 241, 0.2)',
+          duration: 0.3,
+          ease: 'power2.out'
+        });
+        
+
+        gsap.to(pill.querySelector('svg'), {
+          scale: 1.1,
+          rotation: 2,
+          duration: 0.3,
+          ease: 'back.out(1.7)'
+        });
+      });
+      
+
+      pill.addEventListener('mouseleave', () => {
+        gsap.to(pill, {
+          scale: 1,
+          rotation: 0,
+          color: '#1f2937',
+          boxShadow: '0 0 0 rgba(0,0,0,0)',
+          duration: 0.3,
+          ease: 'power2.out'
+        });
+        
+        // Reset de l'icône
+        gsap.to(pill.querySelector('svg'), {
+          scale: 1,
+          rotation: 0,
+          duration: 0.3,
+          ease: 'power2.out'
+        });
+      });
+      
+ 
+      pill.addEventListener('mousedown', () => {
+        gsap.to(pill, {
+          scale: 0.95,
+          duration: 0.1,
+          ease: 'power2.out'
+        });
+      });
+      
+      pill.addEventListener('mouseup', () => {
+        gsap.to(pill, {
+          scale: 1.05,
+          duration: 0.1,
+          ease: 'power2.out'
+        });
+      });
+    });
+  });
+</script>

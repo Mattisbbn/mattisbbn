@@ -1,16 +1,306 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeroPills from "../components/HeroPills.astro";
+import JourneyPills from "../components/JourneyPills.astro";
+import JourneyElement from "../components/JourneyElement.astro";
+import SkillPill from "../components/SkillPill.astro";
+
+import { Image } from "astro:assets";
+import ClickNeat from "../../src/assets/images/clickneat.webp";
+import Ovnyl from "../../src/assets/images/ovnyl.webp";
+import LeBonTrou from "../../src/assets/images/lebontrou.webp";
+import TubeTrack from "../../src/assets/images/tubetrack.png";
+import { Icon } from "astro-icon/components";
+
+
 
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+	<main>
+		<section class="flex flex-col items-center justify-center h-screen">
+			<h1 class="text-5xl sm:text-7xl font-bold text-bright-gray-900 text-center">Mattis Babin</h1>
+			<h2 class="text-2xl sm:text-3xl md:text-3xl font-bold text-bright-gray-900 text-center">Développeur web & mobile</h2>
+			<div class="flex p-4 gap-4 flex-wrap justify-center">
+				<HeroPills icon="fa:github" text="GitHub" href="https://github.com/mattisbbn" />
+				<HeroPills icon="fa:linkedin" text="LinkedIn" href="https://www.linkedin.com/in/mattisbbn/" />
+			</div>
+		</section>
+
+		<section class="flex flex-col items-center justify-center min-h-screen w-10/12 sm:w-8/12 xl:w-6/12 mx-auto">	
+			<h2 class="text-4xl sm:text-5xl text-center font-bold text-gray-800 mb-8">Qui suis-je ?</h2>
+
+			<p class="text-gray-800 text-xl sm:text-2xl mb-6">
+				Je m'appelle Mattis, j'ai 19 ans et je viens d'obtenir mon BTS SIO option SLAM avec la mention assez bien. Passionné par le développement web, je suis curieux et touche-à-tout.
+				</p>
+				<p class="text-gray-800 text-xl sm:text-2xl mb-6">	
+					Je poursuis actuellement un Bachelor Concepteur Développeur d'Applications et je recherche une alternance sur Angers / Maine-et-Loire dès maintenant.
+				</p>
+				<p class="text-gray-800 text-xl sm:text-2xl ">	
+					Je suis à l'aise avec Laravel, React, Vue.js et PHP natif. J'apprends également Next.js et j'ai déjà réalisé des projets complets, du back-end au front-end. Curieux, motivé et sérieux, je suis toujours prêt à découvrir de nouvelles technologies et relever de nouveaux défis.
+				</p>
+		</section>
+
+		<section class="flex flex-col items-center justify-center min-h-screen ">
+			<h2 class="text-4xl sm:text-5xl text-center font-bold text-gray-800 mb-8">Mon parcours</h2>
+
+			<div class="flex flex-row gap-4 mb-12">
+				<JourneyPills id="school" text="Scolaire" icon="fa:graduation-cap" active={true} />
+				<JourneyPills id="professional" text="Professionnel" icon="fa:briefcase" />
+			</div>
+
+
+
+			<div id="school-timeline" class="ms-auto me-auto timeline ">
+				<JourneyElement typeIcon="fa:graduation-cap" title="MyDigitalSchool" description="Bachelor CDA" location="Belle-Beille" date="Septembre 2025 - Actuellement" barColor='border-chetwode-blue-500' />
+				<JourneyElement typeIcon="fa:graduation-cap" title="École Supérieure des Pays de Loire" description="BTS SIO SLAM" location="Belle-Beille" date="2023-2025" barColor='border-chetwode-blue-500' />
+				<JourneyElement typeIcon="fa:graduation-cap" title="Saint Aubin La Salle" description="BAC PRO systemes Numériques" location="Verrieres-sur-Anjou" date="2020-2023" barColor='border-chetwode-blue-500' />
+			
+				
+			</div>
+
+			<div id="professional-timeline" class="ms-auto me-auto timeline hidden">
+				<JourneyElement typeIcon="fa:briefcase" title="Electroniques Services" description="Stage - Électronicien" location="Saint-Melaine-sur-Aubance" date="Novembre 2022 - Janvier 2023 | Mai 2022" barColor='border-chetwode-blue-500' />
+				<JourneyElement typeIcon="fa:briefcase" title="My Micro" description="Alternance - Technicien informatique" location="Thouarcé / Angers" date="Septembre 2023" barColor='border-chetwode-blue-500' />
+				<JourneyElement typeIcon="fa:briefcase" title="Leclerc Drive" description="Job étudiant - Employé drive" location="Pont-de-Cé" date="Mai 2024 - juillet 2024" barColor='border-chetwode-blue-500' />
+				<JourneyElement typeIcon="fa:briefcase" title="Akoufen" description="Alternance - Développeur web" location="Brissac-Quincé" date="Septembre 2024 - Aout 2025" barColor='border-chetwode-blue-500' />
+			</div>
+
+	
+			</div>
+		</section>
+
+		<section class="flex flex-col items-center justify-center min-h-screen">
+			<h2 class="text-4xl sm:text-5xl text-center font-bold text-gray-800 mb-16">Mes compétences</h2>
+
+			<div class="flex flex-col items-center  gap-4 w-10/12">
+				<div class="flex flex-col gap-4">
+					<h3 class="text-3xl font-bold text-gray-800 underline mb-4">J'utilise :</h3>
+					<h4 class="text-2xl font-bold text-gray-800">Langages</h4>
+					<div class="flex flex-row flex-wrap gap-4">
+						<SkillPill icon="devicon-php-plain" title="PHP" color="#777BB4" />
+						<SkillPill icon="devicon-javascript-plain" title="JavaScript" color="#F7DF1E" />
+						<SkillPill icon="devicon-azuresqldatabase-plain" title="SQL" color="#4479A1" />
+					</div>
+
+					<h4 class="text-2xl font-bold text-gray-800">Frameworks</h4>
+					<div class="flex flex-row gap-4 flex-wrap">
+						<SkillPill icon="devicon-laravel-plain" title="Laravel" color="#FF2D20" />
+						<SkillPill icon="devicon-react-plain" title="React" color="#61DAFB" />
+						<SkillPill icon="devicon-vuejs-plain" title="Vue.js" color="#42B883" />
+						<SkillPill icon="devicon-astro-plain" title="Astro" color="#FF5D01" />
+						<SkillPill icon="devicon-tailwindcss-plain" title="TailwindCSS" color="#38BDF8" />
+						<SkillPill icon="devicon-bootstrap-plain" title="Bootstrap" color="#712CF9" />
+					</div>
+
+					<h4 class="text-2xl font-bold text-gray-800">Autres</h4>
+					<div class="flex flex-row gap-4 flex-wrap">
+						<SkillPill icon="devicon-debian-plain" title="Debian" color="#A81D33" />
+						<SkillPill icon="devicon-nginx-plain" title="Nginx" color="#269539" />
+						<SkillPill icon="devicon-github-plain" title="GitHub" color="#181717" />
+						<SkillPill icon="devicon-git-plain" title="Git" color="#F34F29" />
+						
+					</div>
+
+					<h3 class="text-3xl font-bold text-gray-800 underline my-4">J'apprends :</h3>
+			
+					<div class="flex flex-col gap-4">
+						<div class="flex flex-row gap-4 flex-wrap">
+							<SkillPill icon="devicon-reactnative-original" title="React Native" color="#61DAFB" />
+							<SkillPill icon="devicon-nextjs-plain" title="Next.js" color="#000000" />
+							<SkillPill icon="devicon-java-plain" title="Java" color="#EA2D2E" />
+							<SkillPill icon="devicon-docker-plain" title="Docker" color="#2496ED" />
+						</div>
+					</div>
+
+				</div>
+				<div>
+				
+				</div>
+				
+			</div>
+		</section>
+
+		<section class="flex flex-col items-center justify-center min-h-screen">
+			<h2 class="text-4xl sm:text-5xl text-center font-bold text-gray-800 mb-16">Mes projets</h2>
+
+		
+
+			<div class="flex flex-wrap justify-center gap-6 w-10/12">
+
+				<div class="project-card flex flex-col self-start  w-105 rounded-xl overflow-hidden bg-white shadow-lg">
+					<Image src={ClickNeat} alt="Interface du site Click &amp; Eat, application web de commande de repas développée par Mattis Babin" class="w-full object-cover rounded-t-lg" />
+					<div class="p-4">
+						<h3 class="text-xl font-bold text-gray-800 mb-2">Click &amp; Eat</h3>
+						<p class="text-gray-600 line-clamp-3 project-description"><b>Introduction :</b> Ce projet avait pour but de concevoir une application web de type "Click &amp; Collect", appliquée ici au domaine de la restauration, sous le nom fictif de Click&amp;Eat. L'application devait permettre aux clients de réserver une table dans un restaurant, tout en ayant la possibilité de passer leur commande à l'avance, afin de réduire le temps d'attente une fois sur place.
+						<br><br>
+						<b>Contexte :</b> Ce projet a été réalisé dans le cadre de mon BTS SIO option SLAM. Nous avons eu pour objectif de concevoir une application web de type "Click &amp; Collect", appliquée ici au domaine de la restauration, sous le nom fictif de Click&amp;Eat. L'application devait permettre aux clients de réserver une table dans un restaurant, tout en ayant la possibilité de passer leur commande à l'avance, afin de réduire le temps d'attente une fois sur place.
+						<br><br>
+						<b>Technologies utilisées :</b> Laravel, Tailwind, Bootstrap, MariaDB, Git, Stripe
+	
+					</p>
+	
+				   
+	
+	
+					<button class=" mt-2 bg-chetwode-blue-500 text-white px-3 py-1 rounded-full expand-project-button cursor-pointer"> <Icon name="fa:external-link" class="inline w-4 h-4 mr-1" /> En savoir plus</button>
+	
+					   
+					<a href="https://clickneat.mattisbabin.fr/" target="_blank" class="text-gray-600 mb-2 mx-2">Projet <Icon name="fa:external-link" class="inline w-4 h-4 ml-1" /></a>
+	
+					<a href="https://github.com/mattisbbn/clickneat" target="_blank" class="text-gray-600 mb-2 ms-2">Github <Icon name="fa:external-link" class="inline w-4 h-4 ml-1" /></a>
+				   
+	
+	
+	
+					  
+	
+					</div>
+				</div>
+	
+				<div class="project-card flex flex-col self-start  w-105 rounded-xl  overflow-hidden bg-white shadow-lg">
+					<Image src={Ovnyl} alt="Landpage du site web OVnyl, développée par Mattis Babin chez Akoufen." class="w-full object-cover rounded-t-lg" />
+					<div class="p-4">
+						<h3 class="text-xl font-bold text-gray-800 mb-2">OVnyl</h3>
+	
+				   
+						<p class="text-gray-600 line-clamp-3 project-description"><b>Introduction :</b> Le projet Ovnyl avait pour but de concevoir une refonte complète d’un site e-commerce existant, en améliorant à la fois la sécurité, la maintenabilité et l’expérience utilisateur. L’objectif était de moderniser un site initialement développé en PHP 5 avec de nombreuses dépendances dépréciées et vulnérables, afin de le rendre plus stable et plus facile à maintenir.
+						<br><br>
+	
+	
+						<b>Contexte :</b> Ce projet a été réalisé dans le cadre de mon alternance chez Akoufen, pour un client réel possédant un site e-commerce. Le client souhaitait initialement uniquement une refonte graphique, mais j’ai proposé et mis en place une refonte complète du site, afin de renforcer la sécurité et la maintenabilité, tout en conservant une stack technique simple et adaptée à l’environnement de travail de l’équipe.
+						<br><br>
+	
+						<b>Technologies utilisées :</b> PHP, MySQL, Bootstrap, JavaScript, Git
+	
+					</p>
+	
+				   
+	
+	
+						<button class=" mt-2 bg-chetwode-blue-500 text-white px-3 py-1 rounded-full expand-project-button cursor-pointer"> <Icon name="fa:external-link" class="inline w-4 h-4 mr-1" /> En savoir plus</button>
+	
+					   
+						<a href="https://www.ovnyl.com" target="_blank" class="text-gray-600 mb-2 mx-2">Projet <Icon name="fa:external-link" class="inline w-4 h-4 ml-1" /></a>
+					</div>
+				</div>
+	
+				<div class="project-card flex flex-col self-start  w-105 rounded-xl  overflow-hidden bg-white shadow-lg">
+					<Image src={LeBonTrou} alt="Landpage du site web OVnyl, développée par Mattis Babin chez Akoufen." class="w-full object-cover rounded-t-lg" />
+					<div class="p-4">
+						<h3 class="text-xl font-bold text-gray-800 mb-2">LeBonTrou</h3>
+	
+				   
+						<p class="text-gray-600 line-clamp-3 project-description"><b>Introduction :</b> Ce projet avait pour but de concevoir un site web volontairement absurde, dans le cadre d'un projet de cours lors du Bachelor CDA. L'objectif était de créer un site qui n'a aucun sens, en explorant librement notre créativité sur deux jours de travail.
+						<br><br>
+	
+	
+						<b>Contexte :</b> Ce projet a été réalisé sur deux journées de cours, en binôme. L'idée était de concevoir un site original et décalé, sans contrainte de logique ni d'utilité réelle. Le site introduit une monnaie virtuelle totalement absurde, nommée HLC, dont la valeur est calculée selon la formule suivante :<br><br>
+						
+						<span class="font-mono bg-white/80 inline-block p-2 rounded-lg text-sm">(((PIB moyen par habitant du Soudan du Sud × Vitesse du vent à Saint-Rémy-en-Bouzemont-Saint-Genest-et-Isson) ÷ Taille moyenne des trous de serrures) ÷ Nombre de hotdogs mangés aux États-Unis le 4 juillet lors de la fête nationale) ÷ 1 000 000</span>
+	
+						<br><br>
+	
+						<b>Technologies utilisées :</b> Laravel, Tailwind, MariaDB, Github
+	
+					</p>
+	
+				   
+	
+	
+						<button class=" mt-2 bg-chetwode-blue-500 text-white px-3 py-1 rounded-full expand-project-button cursor-pointer"> <Icon name="fa:external-link" class="inline w-4 h-4 mr-1" /> En savoir plus</button>
+	
+					   
+						<a href="https://lebontrou.mattisbabin.fr/" target="_blank" class="text-gray-600 mb-2 mx-2">Projet <Icon name="fa:external-link" class="inline w-4 h-4 ml-1" /></a>
+	
+						<a href="https://github.com/mattisbbn/lebontrou" target="_blank" class="text-gray-600 mb-2 ms-2">Github <Icon name="fa:external-link" class="inline w-4 h-4 ml-1" /></a>
+					</div>
+				</div>
+
+				<div class="project-card flex flex-col self-start  w-105 rounded-xl overflow-hidden bg-white shadow-lg">
+					<Image src={TubeTrack} alt="Interface de l'application web TubeTrack, permettant de suivre la progression dans une playlist YouTube." class="w-full object-cover rounded-t-lg" />
+					<div class="p-4">
+					<h3 class="text-xl font-bold text-gray-800 mb-2">TubeTrack</h3>
+					<p class="text-gray-600 line-clamp-3 project-description">
+					<b>Introduction :</b> TubeTrack est une application web conçue pour permettre aux utilisateurs de suivre facilement leur progression dans une playlist YouTube. En utilisant les API fournies par Google, l'outil offre une solution pratique pour ne jamais perdre le fil de ses vidéos à regarder.
+					
+					
+					<br><br>
+					
+					<b>Contexte :</b> Ce projet a été développé dans un but d'auto-formation, avec l'objectif principal d'approfondir mes compétences en React pour la partie front-end et d'apprendre à construire une API robuste avec le framework Express.js pour la partie back-end. L'interaction avec des API externes, comme celle de YouTube, était également un point central du projet.
+					
+					
+					<br><br>
+					
+					<b>Technologies utilisées :</b> React, Express.js, Node.js, API YouTube Data v3, Git, Github
+					</p>
+					<button class=" mt-2 bg-chetwode-blue-500 text-white px-3 py-1 rounded-full expand-project-button cursor-pointer"> <Icon name="fa:external-link" class="inline w-4 h-4 mr-1" /> En savoir plus</button>
+					<a href="https://tubetrack.mattisbabin.fr" target="_blank" class="text-gray-600 mb-2 mx-2">Projet <Icon name="fa:external-link" class="inline w-4 h-4 ml-1" /></a>
+					<a href="https://github.com/Mattisbbn/tubetrack" target="_blank" class="text-gray-600 mb-2 ms-2">Github <Icon name="fa:external-link" class="inline w-4 h-4 ml-1" /></a>
+					</div>
+				</div>
+	
+			</div>
+		</section>
+	</main>
+
+</BaseLayout>
+
+<script>
+	const pills = document.querySelectorAll('.journey-pill');
+	const timelines = document.querySelectorAll('.timeline');
+
+	const journeyHandler = () => {
+
+		pills.forEach(pill => {
+        pill.addEventListener('click', () => {
+
+			if(pill.classList.contains('active')) {
+				return;
+			}
+
+
+            pills.forEach(otherPill => {
+                otherPill.classList.remove('bg-chetwode-blue-500', 'text-white', 'border-chetwode-blue-500');
+                otherPill.classList.add('bg-gray-50', 'text-bright-gray-900', 'border-2');
+				otherPill.classList.remove('active');
+                timelines.forEach(timeline => {
+                    timeline.classList.add('hidden');
+                });
+            });
+            pill.classList.remove('bg-gray-50', 'text-bright-gray-900', 'border-gray-200');
+            pill.classList.add('bg-chetwode-blue-500', 'text-white', 'border-chetwode-blue-500');
+			pill.classList.add('active');
+			if(pill.id === 'school') {
+				document.getElementById('school-timeline').classList.remove('hidden');
+			}
+			if(pill.id === 'professional') {
+				document.getElementById('professional-timeline').classList.remove('hidden');
+			}
+        });
+    });
+
+	}
+
+	const ProjectHandler = () => {
+
+		const expandProjectButtons = document.querySelectorAll(".expand-project-button")
+const projectDescriptions = document.querySelectorAll(".project-description")   
+
+expandProjectButtons.forEach((button,index) => {
+
+    button.addEventListener("click",()=>{
+        if(projectDescriptions[index].classList.contains("line-clamp-3")){
+            projectDescriptions[index].classList.remove("line-clamp-3")
+        }else{
+            projectDescriptions[index].classList.add("line-clamp-3")
+        }
+    })
+
+    
+});
+
+	}
+	ProjectHandler();
+	journeyHandler();
+</script>

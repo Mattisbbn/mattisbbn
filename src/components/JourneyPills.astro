@@ -1,0 +1,11 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const { id, text, icon, active } = Astro.props;
+
+---
+
+
+<button id={id} class=`  transition-all duration-100 journey-pill text-bright-gray-900 text-center font-semibold flex space-x-2 ${active ? 'bg-chetwode-blue-500 text-white border-chetwode-blue-500' : 'bg-gray-50 border-2'} px-3 py-2 rounded-xl cursor-pointer text-lg items-center gap-1`><Icon name={icon} class="text-xl w-8" />{text}</button>
+
+
