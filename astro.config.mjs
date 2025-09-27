@@ -9,7 +9,7 @@ export default defineConfig({
   integrations: [
     astroIcon({
       iconify: {
-        collections: ['fa', 'fa-brands', 'fa-solid']
+        collections: ['fa', 'fa-brands', 'fa-solid', 'lucide']
       }
     })
   ],

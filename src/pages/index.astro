@@ -99,7 +99,7 @@ import { Icon } from "astro-icon/components";
 						<SkillPill icon="devicon-nginx-plain" title="Nginx" color="#269539" />
 						<SkillPill icon="devicon-github-plain" title="GitHub" color="#181717" />
 						<SkillPill icon="devicon-git-plain" title="Git" color="#F34F29" />
-						
+				
 					</div>
 
 					<h3 class="text-3xl font-bold text-gray-800 underline my-4">J'apprends :</h3>
@@ -117,7 +117,7 @@ import { Icon } from "astro-icon/components";
 				<div>
 				
 				</div>
-				
+			
 			</div>
 		</section>
 
@@ -242,6 +242,46 @@ import { Icon } from "astro-icon/components";
 	
 			</div>
 		</section>
+
+		<section class="flex flex-col items-center justify-center min-h-screen">
+			<h2 class="text-4xl sm:text-5xl text-center font-bold text-gray-800 mb-16">Me contacter</h2>
+
+			<div class="flex flex-row gap-4 w-6/12">
+				<div class="flex flex-col w-1/2 bg-white rounded-xl p-6 shadow-lg">
+					<h3 class="text-3xl font-bold text-gray-800 mb-4">Informations</h3>
+
+					<a href="mailto:mattisbbnpro@gmail.com" class="flex mb-4">
+						<div class="bg-chetwode-blue-500/20 flex items-center justify-center rounded-full w-12 h-12 me-3">
+							<Icon name="lucide:mail" class="text-chetwode-blue-500  text-2xl" />
+						</div>
+						<div class="flex flex-col">
+							<h4 class="text-gray-500 text-lg font-semibold">Email</h4>
+							<p class="text-gray-700 text-lg ">mattisbbnpro@gmail.com</p>
+						</div>
+					</a>
+
+					<div class="flex mb-4">
+						<div class="bg-chetwode-blue-500/20 flex items-center justify-center rounded-full w-12 h-12 me-3">
+							<Icon name="lucide:map-pin" class="text-chetwode-blue-500  text-2xl" />
+						</div>
+						<div class="flex flex-col">
+							<h4 class="text-gray-500 text-lg font-semibold">Localisation</h4>
+							<p class="text-gray-700 text-lg ">Soulaines-sur-Aubance, Maine-et-Loire</p>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="flex flex-col w-1/2 bg-white rounded-xl p-6 shadow-lg">
+					<h3 class="text-3xl font-bold text-gray-800 mb-4">Retrouvez-moi</h3>
+
+					<a href="https://www.linkedin.com/in/mattisbbn/" target="_blank" class="flex mb-4"> LinkedIn <Icon name="fa:linkedin" class="inline w-4 h-4 ml-1" /></a>
+					
+				</div>
+			</div>
+
+	
+		</section>
 	</main>
 
 </BaseLayout>
@@ -272,10 +312,10 @@ import { Icon } from "astro-icon/components";
             pill.classList.add('bg-chetwode-blue-500', 'text-white', 'border-chetwode-blue-500');
 			pill.classList.add('active');
 			if(pill.id === 'school') {
-				document.getElementById('school-timeline').classList.remove('hidden');
+				document.getElementById('school-timeline')?.classList.remove('hidden');
 			}
 			if(pill.id === 'professional') {
-				document.getElementById('professional-timeline').classList.remove('hidden');
+				document.getElementById('professional-timeline')?.classList.remove('hidden');
 			}
         });
     });
