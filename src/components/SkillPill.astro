@@ -1,13 +1,14 @@
 ---
 const { icon, title, color } = Astro.props;
+import { Icon } from 'astro-icon/components';
 ---
 
 
 
 <div 
     class="flex flex-row gap-2 items-center rounded-full shadow-xl p-1 px-4 bg-gray-50 border-1" 
-    style={`border-color: ${color};`}
->   
-   <i class={`${icon} colored text-xl`}></i>
+    style={`border-color: ${color};`}>   
+<Icon name={`devicon:${icon}`} class="text-xl" />
+   <!-- <i class={`${icon} colored text-xl`}></i> -->
     <p class="text-xl">{title}</p>
 </div>
