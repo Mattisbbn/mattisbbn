@@ -1,0 +1,26 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+
+<BaseLayout>
+    <main>
+        <section class="flex flex-col items-center justify-center min-h-screen">
+            <h1 class="text-8xl sm:text-9xl font-extrabold tracking-tighter">404</h1>
+        
+            <p class="text-xl sm:text-2xl font-medium text-gray-800 mt-2">
+                Oups! Page introuvable.
+            </p>
+    
+            <p class="text-gray-500 mt-4 text-lg  max-w-md text-center">
+                Il semblerait que le code de cette page se soit perdu en chemin. Pas d'inquiétude, vous pouvez revenir en lieu sûr.
+            </p>
+
+            <a href="/" 
+               class="mt-8 inline-block bg-chetwode-blue-500 text-white font-semibold py-3 px-8 rounded-lg shadow-md 
+                      hover:bg-chetwode-blue-600 transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-chetwode-blue-500">
+                Retourner à l'accueil
+            </a>
+        </section>
+    </main>
+</BaseLayout>
