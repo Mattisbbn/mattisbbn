@@ -1,0 +1,64 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+
+    <div class="min-h-screen flex flex-col items-center justify-center">
+    <header class="text-center">
+        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-700">Mentions Légales</h1>
+        <p class="mt-4 text-lg text-gray-500">Informations légales concernant le site mattis-babin.fr</p>
+    </header>
+    <main class="flex flex-col items-center justify-center w-10/12 sm:w-8/12 xl:w-6/12 mx-auto">
+        <div class="mt-10 bg-white backdrop-blur-sm border border-gray-200 rounded-xl p-10 space-y-8 text-gray-700 ">
+            <section>
+                <h2 class="text-2xl font-bold text-gray-700">1. Éditeur du site</h2>
+                <p class="mt-2">
+                    Le présent site est édité par :<br>
+                    <strong>Mattis Babin</strong><br>
+                    Email : <a href="mailto:mattisbbnpro@gmail.com" class="text-chetwode-blue-500 hover:underline">mattisbbnpro@gmail.com</a>
+                </p>
+            </section>
+
+            <!-- Section 2: Hosting -->
+            <section>
+                <h2 class="text-2xl font-bold text-gray-700">2. Hébergement</h2>
+                <p class="mt-2">
+                    Ce site est hébergé par :<br>
+                    <strong>OVH SAS</strong><br>
+                    Adresse : 2 rue Kellermann - 59100 Roubaix - France<br>
+                    Site web : <a href="https://www.ovh.com" target="_blank" rel="noopener noreferrer" class="text-chetwode-blue-500 hover:underline">www.ovh.com</a>
+                </p>
+            </section>
+
+            <!-- Section 3: Intellectual Property -->
+            <section>
+                <h2 class="text-2xl font-bold text-gray-700">3. Propriété intellectuelle</h2>
+                <p class="mt-2">
+                    L'ensemble des contenus créés par l'éditeur pour ce site, incluant les textes, le design et les éléments graphiques, est mis à disposition pour consultation. Si vous souhaitez réutiliser une partie de ce contenu, merci de bien vouloir contacter l'éditeur du site pour obtenir une autorisation.
+                </p>
+            </section>
+
+            <!-- Section 4: Personal Data -->
+            <section>
+                <h2 class="text-2xl font-bold text-gray-700">4. Données personnelles</h2>
+                <p class="mt-2">
+                    Ce site ne collecte pas de données personnelles sur ses visiteurs, à l'exception des informations de contact fournies volontairement via l'adresse email de contact. Ces informations ne seront jamais utilisées à des fins commerciales.
+                </p>
+            </section>
+        </div>
+
+
+        <div class="mt-12 text-center">
+            <a href="/" 
+               class="inline-block bg-chetwode-blue-500 text-white font-semibold py-3 px-8 rounded-lg shadow-md 
+                      hover:bg-chetwode-blue-600 transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-chetwode-blue-500">
+                Retourner à l'accueil
+            </a>
+        </div>
+
+
+
+</main>
+</div>
+</BaseLayout>
