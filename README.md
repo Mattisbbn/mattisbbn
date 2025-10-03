@@ -8,57 +8,23 @@ Je poursuis actuellement un Bachelor Concepteur Développeur d'Applications et j
 ## 💻 Compétences
 
 ### Maîtrisées :
-<p>
-  <span style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.25rem 0.75rem;border-radius:9999px;border:2px solid #f7df1e;background-color:#fff9db;margin:2px">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="20" height="20" alt="JavaScript"> JavaScript
-  </span>
-  <span style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.25rem 0.75rem;border-radius:9999px;border:2px solid #777bb3;background-color:#f2f2ff;margin:2px">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" width="20" height="20" alt="PHP"> PHP
-  </span>
-  <span style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.25rem 0.75rem;border-radius:9999px;border:2px solid #00758f;background-color:#e6f7fa;margin:2px">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" width="20" height="20" alt="SQL"> SQL
-  </span>
-  <span style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.25rem 0.75rem;border-radius:9999px;border:2px solid #ff2d20;background-color:#ffeaea;margin:2px">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-original.svg" width="20" height="20" alt="Laravel"> Laravel
-  </span>
-  <span style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.25rem 0.75rem;border-radius:9999px;border:2px solid #61dafb;background-color:#e6f7ff;margin:2px">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" width="20" height="20" alt="React"> React
-  </span>
-  <span style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.25rem 0.75rem;border-radius:9999px;border:2px solid #42b883;background-color:#e6f9f0;margin:2px">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg" width="20" height="20" alt="Vue.js"> Vue.js
-  </span>
-  <span style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.25rem 0.75rem;border-radius:9999px;border:2px solid #ff5a1f;background-color:#fff2eb;margin:2px">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/astro/astro-original.svg" width="20" height="20" alt="Astro"> Astro
-  </span>
-  <span style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.25rem 0.75rem;border-radius:9999px;border:2px solid #06b6d4;background-color:#e0f7fa;margin:2px">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original.svg" width="20" height="20" alt="TailwindCSS"> TailwindCSS
-  </span>
-  <span style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.25rem 0.75rem;border-radius:9999px;border:2px solid #7952b3;background-color:#f3e6ff;margin:2px">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain.svg" width="20" height="20" alt="Bootstrap"> Bootstrap
-  </span>
-  <span style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.25rem 0.75rem;border-radius:9999px;border:2px solid #f05032;background-color:#fff1ed;margin:2px">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" width="20" height="20" alt="Git"> Git
-  </span>
-  <span style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.25rem 0.75rem;border-radius:9999px;border:2px solid #d70a53;background-color:#ffe6ed;margin:2px">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/debian/debian-original.svg" width="20" height="20" alt="Debian"> Debian
-  </span>
-  <span style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.25rem 0.75rem;border-radius:9999px;border:2px solid #009639;background-color:#e6fff0;margin:2px">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nginx/nginx-original.svg" width="20" height="20" alt="Nginx"> Nginx
-  </span>
-</p>
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white)
+![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Astro](https://img.shields.io/badge/Astro-FF5D01?style=for-the-badge&logo=astro&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+![Debian](https://img.shields.io/badge/Debian-A81D33?style=for-the-badge&logo=debian&logoColor=white)
 
 ### En apprentissage :
-<p>
-  <span style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.25rem 0.75rem;border-radius:9999px;border:2px solid #61dafb;background-color:#e6f7ff;margin:2px">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" width="20" height="20" alt="React Native"> React Native
-  </span>
-  <span style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.25rem 0.75rem;border-radius:9999px;border:2px solid #5382a1;background-color:#e6f0f5;margin:2px">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" width="20" height="20" alt="Java"> Java
-  </span>
-  <span style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.25rem 0.75rem;border-radius:9999px;border:2px solid #2496ed;background-color:#e6f3ff;margin:2px">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" width="20" height="20" alt="Docker"> Docker
-  </span>
-</p>
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![React Native](https://img.shields.io/badge/React_Native-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 
 ---
 
