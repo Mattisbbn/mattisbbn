@@ -60,10 +60,12 @@ import { Icon } from "astro-icon/components";
 			</div>
 
 			<div id="professional-timeline" class="ms-auto me-auto timeline hidden">
-				<JourneyElement typeIcon="fa:briefcase" title="Electroniques Services" description="Stage - Électronicien" location="Saint-Melaine-sur-Aubance" date="Novembre 2022 - Janvier 2023 | Mai 2022" barColor='border-chetwode-blue-500' />
-				<JourneyElement typeIcon="fa:briefcase" title="My Micro" description="Alternance - Technicien informatique" location="Thouarcé / Angers" date="Septembre 2023" barColor='border-chetwode-blue-500' />
-				<JourneyElement typeIcon="fa:briefcase" title="Leclerc Drive" description="Job étudiant - Employé drive" location="Pont-de-Cé" date="Mai 2024 - juillet 2024" barColor='border-chetwode-blue-500' />
 				<JourneyElement typeIcon="fa:briefcase" title="Akoufen" description="Alternance - Développeur web" location="Brissac-Quincé" date="Septembre 2024 - Aout 2025" barColor='border-chetwode-blue-500' />
+				<JourneyElement typeIcon="fa:briefcase" title="Leclerc Drive" description="Job étudiant - Employé drive" location="Pont-de-Cé" date="Mai 2024 - juillet 2024" barColor='border-chetwode-blue-500' />
+				<JourneyElement typeIcon="fa:briefcase" title="My Micro" description="Alternance - Technicien informatique" location="Thouarcé / Angers" date="Septembre 2023" barColor='border-chetwode-blue-500' />
+				<JourneyElement typeIcon="fa:briefcase" title="Electroniques Services" description="Stage - Électronicien" location="Saint-Melaine-sur-Aubance" date="Novembre 2022 - Janvier 2023 | Mai 2022" barColor='border-chetwode-blue-500' />
+			
+			
 			</div>
 
 	
@@ -341,13 +343,12 @@ import { Icon } from "astro-icon/components";
     });
 
 	}
-
 	const ProjectHandler = () => {
 
 		const expandProjectButtons = document.querySelectorAll(".expand-project-button")
-const projectDescriptions = document.querySelectorAll(".project-description")   
+		const projectDescriptions = document.querySelectorAll(".project-description")   
 
-expandProjectButtons.forEach((button,index) => {
+	expandProjectButtons.forEach((button,index) => {
 
     button.addEventListener("click",()=>{
         if(projectDescriptions[index].classList.contains("line-clamp-3")){
@@ -358,7 +359,7 @@ expandProjectButtons.forEach((button,index) => {
     })
 
     
-});
+	});
 
 	}
 	ProjectHandler();
