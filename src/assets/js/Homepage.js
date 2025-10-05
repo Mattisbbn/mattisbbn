@@ -53,6 +53,12 @@ export const ProjectHandler = () => {
 
 }
 export const ThemeToggle = () => {
+
+
+
+
+
+
     const themeToggleButton = document.getElementById("theme-toggle-button")
     const body = document.documentElement
     themeToggleButton.addEventListener("click",()=>{
@@ -61,9 +67,11 @@ export const ThemeToggle = () => {
         if(body.classList.contains("dark")){
             document.getElementById("moon-icon").classList.add("hidden")
             document.getElementById("sun-icon").classList.remove("hidden")
+            localStorage.setItem("theme", "dark")
         }else{
             document.getElementById("moon-icon").classList.remove("hidden")
             document.getElementById("sun-icon").classList.add("hidden")
+            localStorage.setItem("theme", "light")
         }
     })
 }
