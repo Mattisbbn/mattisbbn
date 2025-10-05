@@ -4,6 +4,7 @@ import HeroPills from "../components/HeroPills.astro";
 import JourneyPills from "../components/JourneyPills.astro";
 import JourneyElement from "../components/JourneyElement.astro";
 import SkillPill from "../components/SkillPill.astro";
+import ProjectCard from "../components/ProjectCard.astro";
 
 import { Image } from "astro:assets";
 import ClickNeat from "../../src/assets/images/clickneat.webp";
@@ -16,11 +17,18 @@ import { Icon } from "astro-icon/components";
 
 ---
 
+
 <BaseLayout>
 	<main>
+		<div class="fixed top-4 right-4" id="theme-toggle">
+			<button id="theme-toggle-button" class="text-bright-gray-900 dark:text-gray-200 cursor-">
+				<Icon name="lucide:moon" class="text-2xl" id="moon-icon" />
+				<Icon name="lucide:sun" class="text-2xl hidden" id="sun-icon" />
+			</button>
+		</div>
 		<section class="flex flex-col items-center justify-center h-screen">
-			<h1 class="text-5xl sm:text-7xl font-bold text-bright-gray-900 text-center">Mattis Babin</h1>
-			<h2 class="text-2xl sm:text-3xl md:text-3xl font-bold text-bright-gray-900 text-center">Développeur web & mobile</h2>
+			<h1 class="text-5xl sm:text-7xl font-bold text-bright-gray-900 text-center dark:text-gray-200">Mattis Babin</h1>
+			<h2 class="text-2xl sm:text-3xl md:text-3xl font-bold text-bright-gray-900 text-center dark:text-gray-400">Développeur web & mobile</h2>
 			<div class="flex p-4 gap-4 flex-wrap justify-center">
 				<HeroPills icon="fa:github" text="GitHub" href="https://github.com/mattisbbn" />
 				<HeroPills icon="fa:linkedin" text="LinkedIn" href="https://www.linkedin.com/in/mattisbbn/" />
@@ -28,21 +36,21 @@ import { Icon } from "astro-icon/components";
 		</section>
 
 		<section class="flex flex-col items-center justify-center min-h-screen w-10/12 sm:w-8/12 xl:w-6/12 mx-auto">	
-			<h2 class="text-4xl sm:text-5xl text-center font-bold text-gray-800 mb-8">Qui suis-je ?</h2>
+			<h2 class="text-4xl sm:text-5xl text-center font-bold text-gray-800 mb-8 dark:text-gray-200">Qui suis-je ?</h2>
 
-			<p class="text-gray-800 text-xl sm:text-2xl mb-6">
+			<p class="text-gray-800 text-xl sm:text-2xl mb-6 dark:text-gray-200">
 				Je m'appelle Mattis, j'ai 19 ans et je viens d'obtenir mon BTS SIO option SLAM avec la mention assez bien. Passionné par le développement web, je suis curieux et touche-à-tout.
 				</p>
-				<p class="text-gray-800 text-xl sm:text-2xl mb-6">	
+				<p class="text-gray-800 text-xl sm:text-2xl mb-6 dark:text-gray-200">	
 					Je poursuis actuellement un Bachelor Concepteur Développeur d'Applications et je recherche une alternance sur Angers / Maine-et-Loire dès maintenant.
 				</p>
-				<p class="text-gray-800 text-xl sm:text-2xl ">	
+				<p class="text-gray-800 text-xl sm:text-2xl dark:text-gray-200">	
 					Je suis à l'aise avec Laravel, React, Vue.js et PHP natif. J'apprends également Next.js et j'ai déjà réalisé des projets complets, du back-end au front-end. Curieux, motivé et sérieux, je suis toujours prêt à découvrir de nouvelles technologies et relever de nouveaux défis.
 				</p>
 		</section>
 
 		<section class="flex flex-col items-center justify-center min-h-screen ">
-			<h2 class="text-4xl sm:text-5xl text-center font-bold text-gray-800 mb-8">Mon parcours</h2>
+			<h2 class="text-4xl sm:text-5xl text-center font-bold text-gray-800 mb-8 dark:text-gray-200">Mon parcours</h2>
 
 			<div class="flex flex-row gap-4 mb-12">
 				<JourneyPills id="school" text="Scolaire" icon="fa:graduation-cap" active={true} />
@@ -71,19 +79,19 @@ import { Icon } from "astro-icon/components";
 		</section>
 
 		<section class="flex flex-col items-center justify-center min-h-screen">
-			<h2 class="text-4xl sm:text-5xl text-center font-bold text-gray-800 mb-16">Mes compétences</h2>
+			<h2 class="text-4xl sm:text-5xl text-center font-bold text-gray-800 mb-16 dark:text-gray-200">Mes compétences</h2>
 
 			<div class="flex flex-col items-center  gap-4 w-10/12">
 				<div class="flex flex-col gap-4">
-					<h3 class="text-3xl font-bold text-gray-800 underline mb-4">J'utilise :</h3>
-					<h4 class="text-2xl font-bold text-gray-800">Langages</h4>
+					<h3 class="text-3xl font-bold text-gray-800 underline mb-4 dark:text-gray-200">J'utilise :</h3>
+					<h4 class="text-2xl font-bold text-gray-800 dark:text-gray-200">Langages</h4>
 					<div class="flex flex-row flex-wrap gap-4">
 						<SkillPill icon="php" title="PHP" color="#777BB4" />
 						<SkillPill icon="javascript" title="JavaScript" color="#F7DF1E" />
 						<SkillPill icon="azuresqldatabase" title="SQL" color="#4479A1" />
 					</div>
 
-					<h4 class="text-2xl font-bold text-gray-800">Frameworks</h4>
+					<h4 class="text-2xl font-bold text-gray-800 dark:text-gray-200">Frameworks</h4>
 					<div class="flex flex-row gap-4 flex-wrap">
 						<SkillPill icon="laravel" title="Laravel" color="#FF2D20" />
 						<SkillPill icon="react" title="React" color="#61DAFB" />
@@ -93,7 +101,7 @@ import { Icon } from "astro-icon/components";
 						<SkillPill icon="bootstrap" title="Bootstrap" color="#712CF9" />
 					</div>
 
-					<h4 class="text-2xl font-bold text-gray-800">Autres</h4>
+					<h4 class="text-2xl font-bold text-gray-800 dark:text-gray-200">Autres</h4>
 					<div class="flex flex-row gap-4 flex-wrap">
 						<SkillPill icon="debian" title="Debian" color="#A81D33" />
 						<SkillPill icon="nginx" title="Nginx" color="#269539" />
@@ -102,7 +110,7 @@ import { Icon } from "astro-icon/components";
 				
 					</div>
 
-					<h3 class="text-3xl font-bold text-gray-800 underline my-4">J'apprends :</h3>
+					<h3 class="text-3xl font-bold text-gray-800 underline my-4 dark:text-gray-200">J'apprends :</h3>
 			
 					<div class="flex flex-col gap-4">
 						<div class="flex flex-row gap-4 flex-wrap">
@@ -122,141 +130,70 @@ import { Icon } from "astro-icon/components";
 		</section>
 
 		<section class="flex flex-col items-center justify-center min-h-screen">
-			<h2 class="text-4xl sm:text-5xl text-center font-bold text-gray-800 mb-16">Mes projets</h2>
+			<h2 class="text-4xl sm:text-5xl text-center font-bold text-gray-800 mb-16 dark:text-gray-200">Mes projets</h2>
 
 		
 
 			<div class="flex flex-wrap justify-center gap-6 w-10/12">
 
-				<div class="project-card flex flex-col self-start  w-105 rounded-xl overflow-hidden bg-white shadow-lg">
-					<Image src={ClickNeat} alt="Interface du site Click &amp; Eat, application web de commande de repas développée par Mattis Babin" class="w-full object-cover rounded-t-lg" />
-					<div class="p-4">
-						<h3 class="text-xl font-bold text-gray-800 mb-2">Click &amp; Eat</h3>
-						<p class="text-gray-600 line-clamp-3 project-description"><b>Introduction :</b> Ce projet avait pour but de concevoir une application web de type "Click &amp; Collect", appliquée ici au domaine de la restauration, sous le nom fictif de Click&amp;Eat. L'application devait permettre aux clients de réserver une table dans un restaurant, tout en ayant la possibilité de passer leur commande à l'avance, afin de réduire le temps d'attente une fois sur place.
-						<br><br>
-						<b>Contexte :</b> Ce projet a été réalisé dans le cadre de mon BTS SIO option SLAM. Nous avons eu pour objectif de concevoir une application web de type "Click &amp; Collect", appliquée ici au domaine de la restauration, sous le nom fictif de Click&amp;Eat. L'application devait permettre aux clients de réserver une table dans un restaurant, tout en ayant la possibilité de passer leur commande à l'avance, afin de réduire le temps d'attente une fois sur place.
-						<br><br>
-						<b>Technologies utilisées :</b> Laravel, Tailwind, Bootstrap, MariaDB, Git, Stripe
+				
+				<ProjectCard 
+					title="Click &amp; Eat" 
+					description=`Ce projet avait pour but de concevoir une application web de type "Click & Collect", appliquée ici au domaine de la restauration, sous le nom fictif de Click&Eat. L'application devait permettre aux clients de réserver une table dans un restaurant, tout en ayant la possibilité de passer leur commande à l'avance, afin de réduire le temps d'attente une fois sur place.`
+					context=`Ce projet a été réalisé dans le cadre de mon BTS SIO option SLAM. Nous avons eu pour objectif de concevoir une application web de type "Click & Collect", appliquée ici au domaine de la restauration, sous le nom fictif de Click&Eat. L'application devait permettre aux clients de réserver une table dans un restaurant, tout en ayant la possibilité de passer leur commande à l'avance, afin de réduire le temps d'attente une fois sur place.`
+					technologies="Laravel, Tailwind, Bootstrap, MariaDB, Git, Stripe" 
+					image={ClickNeat} 
+					projectLink="https://clickneat.mattisbabin.fr/" 
+					githubLink="https://github.com/mattisbbn/clickneat" 
+				/>
 	
-					</p>
-	
-				   
-	
-	
-					<button class="mt-2 bg-chetwode-blue-500 text-white px-3 py-1 rounded-full expand-project-button cursor-pointer ">En savoir plus <Icon name="fa:external-link" class="inline w-4 h-4 ms-1" /></button>
-	
-					   
-					<a href="https://clickneat.mattisbabin.fr/" target="_blank" class="text-gray-600 mb-2 mx-2">Projet <Icon name="fa:external-link" class="inline w-4 h-4 ml-1" /></a>
-	
-					<a href="https://github.com/mattisbbn/clickneat" target="_blank" class="text-gray-600 mb-2 ms-2">Github <Icon name="fa:external-link" class="inline w-4 h-4 ml-1" /></a>
-				   
-	
-	
-	
-					  
-	
-					</div>
-				</div>
-	
-				<div class="project-card flex flex-col self-start  w-105 rounded-xl  overflow-hidden bg-white shadow-lg">
-					<Image src={Ovnyl} alt="Landpage du site web OVnyl, développée par Mattis Babin chez Akoufen." class="w-full object-cover rounded-t-lg" />
-					<div class="p-4">
-						<h3 class="text-xl font-bold text-gray-800 mb-2">OVnyl</h3>
-	
-				   
-						<p class="text-gray-600 line-clamp-3 project-description"><b>Introduction :</b> Le projet Ovnyl avait pour but de concevoir une refonte complète d’un site e-commerce existant, en améliorant à la fois la sécurité, la maintenabilité et l’expérience utilisateur. L’objectif était de moderniser un site initialement développé en PHP 5 avec de nombreuses dépendances dépréciées et vulnérables, afin de le rendre plus stable et plus facile à maintenir.
-						<br><br>
-	
-	
-						<b>Contexte :</b> Ce projet a été réalisé dans le cadre de mon alternance chez Akoufen, pour un client réel possédant un site e-commerce. Le client souhaitait initialement uniquement une refonte graphique, mais j’ai proposé et mis en place une refonte complète du site, afin de renforcer la sécurité et la maintenabilité, tout en conservant une stack technique simple et adaptée à l’environnement de travail de l’équipe.
-						<br><br>
-	
-						<b>Technologies utilisées :</b> PHP, MySQL, Bootstrap, JavaScript, Git
-	
-					</p>
-	
-				   
-	
-	
-						<button class=" mt-2 bg-chetwode-blue-500 text-white px-3 py-1 rounded-full expand-project-button cursor-pointer">En savoir plus <Icon name="fa:external-link" class="inline w-4 h-4 ms-1" /></button>
-	
-					   
-						<a href="https://www.ovnyl.com" target="_blank" class="text-gray-600 mb-2 mx-2">Projet <Icon name="fa:external-link" class="inline w-4 h-4 ml-1" /></a>
-					</div>
-				</div>
-	
-				<div class="project-card flex flex-col self-start  w-105 rounded-xl  overflow-hidden bg-white shadow-lg">
-					<Image src={LeBonTrou} alt="Landpage du site web OVnyl, développée par Mattis Babin chez Akoufen." class="w-full object-cover rounded-t-lg" />
-					<div class="p-4">
-						<h3 class="text-xl font-bold text-gray-800 mb-2">LeBonTrou</h3>
-	
-				   
-						<p class="text-gray-600 line-clamp-3 project-description"><b>Introduction :</b> Ce projet avait pour but de concevoir un site web volontairement absurde, dans le cadre d'un projet de cours lors du Bachelor CDA. L'objectif était de créer un site qui n'a aucun sens, en explorant librement notre créativité sur deux jours de travail.
-						<br><br>
-	
-	
-						<b>Contexte :</b> Ce projet a été réalisé sur deux journées de cours, en binôme. L'idée était de concevoir un site original et décalé, sans contrainte de logique ni d'utilité réelle. Le site introduit une monnaie virtuelle totalement absurde, nommée HLC, dont la valeur est calculée selon la formule suivante :<br><br>
-						
-						<span class="font-mono bg-white/80 inline-block p-2 rounded-lg text-sm">(((PIB moyen par habitant du Soudan du Sud × Vitesse du vent à Saint-Rémy-en-Bouzemont-Saint-Genest-et-Isson) ÷ Taille moyenne des trous de serrures) ÷ Nombre de hotdogs mangés aux États-Unis le 4 juillet lors de la fête nationale) ÷ 1 000 000</span>
-	
-						<br><br>
-	
-						<b>Technologies utilisées :</b> Laravel, Tailwind, MariaDB, Github
-	
-					</p>
-	
-				   
-	
-	
-						<button class=" mt-2 bg-chetwode-blue-500 text-white px-3 py-1 rounded-full expand-project-button cursor-pointer">En savoir plus <Icon name="fa:external-link" class="inline w-4 h-4 ms-1" /></button>
-	
-					   
-						<a href="https://lebontrou.mattisbabin.fr/" target="_blank" class="text-gray-600 mb-2 mx-2">Projet <Icon name="fa:external-link" class="inline w-4 h-4 ml-1" /></a>
-	
-						<a href="https://github.com/mattisbbn/lebontrou" target="_blank" class="text-gray-600 mb-2 ms-2">Github <Icon name="fa:external-link" class="inline w-4 h-4 ml-1" /></a>
-					</div>
-				</div>
+				<ProjectCard 
+					title="OVnyl" 
+					description=`Le projet Ovnyl avait pour but de concevoir une refonte complète d’un site e-commerce existant, en améliorant à la fois la sécurité, la maintenabilité et l’expérience utilisateur. L’objectif était de moderniser un site initialement développé en PHP 5 avec de nombreuses dépendances dépréciées et vulnérables, afin de le rendre plus stable et plus facile à maintenir.`
+					context="Ce projet a été réalisé dans le cadre de mon alternance chez Akoufen, pour un client réel possédant un site e-commerce. Le client souhaitait initialement uniquement une refonte graphique, mais j’ai proposé et mis en place une refonte complète du site, afin de renforcer la sécurité et la maintenabilité, tout en conservant une stack technique simple et adaptée à l’environnement de travail de l’équipe."
+					technologies="PHP, MySQL, Bootstrap, JavaScript, Git" 
+					image={Ovnyl} 
+					projectLink="https://www.ovnyl.com/" 
+				/>
 
-				<div class="project-card flex flex-col self-start  w-105 rounded-xl overflow-hidden bg-white shadow-lg">
-					<Image src={TubeTrack} alt="Interface de l'application web TubeTrack, permettant de suivre la progression dans une playlist YouTube." class="w-full object-cover rounded-t-lg" />
-					<div class="p-4">
-					<h3 class="text-xl font-bold text-gray-800 mb-2">TubeTrack</h3>
-					<p class="text-gray-600 line-clamp-3 project-description">
-					<b>Introduction :</b> TubeTrack est une application web conçue pour permettre aux utilisateurs de suivre facilement leur progression dans une playlist YouTube. En utilisant les API fournies par Google, l'outil offre une solution pratique pour ne jamais perdre le fil de ses vidéos à regarder.
-					
-					
-					<br><br>
-					
-					<b>Contexte :</b> Ce projet a été développé dans un but d'auto-formation, avec l'objectif principal d'approfondir mes compétences en React pour la partie front-end et d'apprendre à construire une API robuste avec le framework Express.js pour la partie back-end. L'interaction avec des API externes, comme celle de YouTube, était également un point central du projet.
-					
-					
-					<br><br>
-					
-					<b>Technologies utilisées :</b> React, Express.js, Node.js, API YouTube Data v3, Git, Github
-					</p>
-					<button class=" mt-2 bg-chetwode-blue-500 text-white px-3 py-1 rounded-full expand-project-button cursor-pointer">En savoir plus <Icon name="fa:external-link" class="inline w-4 h-4 ms-1" /></button>
-					<a href="https://tubetrack.mattisbabin.fr" target="_blank" class="text-gray-600 mb-2 mx-2">Projet <Icon name="fa:external-link" class="inline w-4 h-4 ml-1" /></a>
-					<a href="https://github.com/Mattisbbn/tubetrack" target="_blank" class="text-gray-600 mb-2 ms-2">Github <Icon name="fa:external-link" class="inline w-4 h-4 ml-1" /></a>
-					</div>
-				</div>
-	
+				<ProjectCard 
+					title="LeBonTrou" 
+					description=`Ce projet avait pour but de concevoir un site web volontairement absurde, dans le cadre d'un projet de cours lors du Bachelor CDA. L'objectif était de créer un site qui n'a aucun sens, en explorant librement notre créativité sur deux jours de travail.`
+					context=`Ce projet a été réalisé sur deux journées de cours, en binôme. L'idéa était de concevoir un site original et décalé, sans contrainte de logique ni d'utilité réelle. Le site introduit une monnaie virtuelle totalement absurde, nommée HLC, dont la valeur est calculée selon la formule suivante : `
+					technologies="Laravel, Tailwind, MariaDB, Github" 
+					image={LeBonTrou} 
+					projectLink="https://lebontrou.mattisbabin.fr/" 
+					githubLink="https://github.com/mattisbbn/lebontrou" 
+					code="(((PIB moyen par habitant du Soudan du Sud × Vitesse du vent à Saint-Rémy-en-Bouzemont-Saint-Genest-et-Isson) ÷ Taille moyenne des trous de serrures) ÷ Nombre de hotdogs mangés aux États-Unis le 4 juillet lors de la fête nationale) ÷ 1 000 000"
+				/>
+
+				<ProjectCard 
+					title="TubeTrack" 
+					description="TubeTrack est une application web conçue pour permettre aux utilisateurs de suivre facilement leur progression dans une playlist YouTube. En utilisant les API fournies par Google, l'outil offre une solution pratique pour ne jamais perdre le fil de ses vidéos à regarder."
+					context=`Ce projet a été développé dans un but d'auto-formation, avec l'objectif principal d'approfondir mes compétences en React pour la partie front-end et d'apprendre à construire une API robuste avec le framework Express.js pour la partie back-end. L'interaction avec des API externes, comme celle de YouTube, était également un point central du projet.`
+					technologies="React, Express.js, Node.js, API YouTube Data v3, Git, Github" 
+					image={TubeTrack} 
+					projectLink="https://tubetrack.mattisbabin.fr/" 
+					githubLink="https://github.com/Mattisbbn/tubetrack" 
+				/>
+		
 			</div>
 		</section>
 
 		<section class="flex flex-col items-center justify-center min-h-screen">
-			<h2 class="text-4xl sm:text-5xl text-center font-bold text-gray-800 mb-16">Me contacter</h2>
+			<h2 class="text-4xl sm:text-5xl text-center font-bold text-gray-800 mb-16 dark:text-gray-200">Me contacter</h2>
 
 			<div class="flex flex-row flex-wrap justify-center gap-4 ">
-				<div class="flex flex-col md:w-110 w-80 bg-white rounded-xl p-6 shadow-lg">
-					<h3 class="text-3xl font-bold text-gray-800 mb-4">Informations</h3>
+				<div class="flex flex-col md:w-110 w-80 bg-white rounded-xl p-6 shadow-lg dark:bg-gray-800">
+					<h3 class="text-3xl font-bold text-gray-800 mb-4 dark:text-gray-200">Informations</h3>
 
 					<a href="mailto:mattisbbnpro@gmail.com" class="flex mt-4">
 						<div class="bg-chetwode-blue-500/20 flex items-center justify-center rounded-full w-12 h-12 me-3">
 							<Icon name="lucide:mail" class="text-chetwode-blue-500  text-2xl" />
 						</div>
 						<div class="flex flex-col">
-							<h4 class="text-gray-500 text-lg font-semibold">Email</h4>
-							<p class="text-gray-700 text-lg ">mattisbbnpro@gmail.com</p>
+							<h4 class="text-gray-500 text-lg font-semibold dark:text-gray-200">Email</h4>
+							<p class="text-gray-700 text-lg dark:text-gray-200">mattisbbnpro@gmail.com</p>
 						</div>
 					</a>
 
@@ -265,32 +202,32 @@ import { Icon } from "astro-icon/components";
 							<Icon name="lucide:map-pin" class="text-chetwode-blue-500  text-2xl" />
 						</div>
 						<div class="flex flex-col">
-							<h4 class="text-gray-500 text-lg font-semibold">Localisation</h4>
-							<p class="text-gray-700 text-lg ">Soulaines sur Aubance, 49</p>
+							<h4 class="text-gray-500 text-lg font-semibold dark:text-gray-200">Localisation</h4>
+							<p class="text-gray-700 text-lg dark:text-gray-200">Soulaines sur Aubance, 49</p>
 						</div>
 					</div>
 				</div>
 
 
-				<div class="flex flex-col md:w-110 w-80 bg-white rounded-xl p-6 shadow-lg">
-					<h3 class="text-3xl font-bold text-gray-800 mb-4">Retrouvez-moi</h3>
+				<div class="flex flex-col md:w-110 w-80 bg-white rounded-xl p-6 shadow-lg dark:bg-gray-800">
+					<h3 class="text-3xl font-bold text-gray-800 mb-4 dark:text-gray-200">Retrouvez-moi</h3>
 
-					<a href="https://www.linkedin.com/in/mattisbbn/" target="_blank" class="group flex items-center justify-between bg-slate-50/50 hover:bg-white p-4 rounded-xl border border-slate-200 hover:border-chetwode-blue-500 hover:shadow-lg hover:shadow-chetwode-blue-500/10 transition-all duration-200 transform hover:-translate-y-1 mt-4">
+					<a href="https://www.linkedin.com/in/mattisbbn/" target="_blank" class="group flex items-center justify-between bg-slate-50/50 hover:bg-white p-4 rounded-xl border border-slate-200 hover:border-chetwode-blue-500 hover:shadow-lg hover:shadow-chetwode-blue-500/10 transition-all duration-200 transform hover:-translate-y-1 mt-4 dark:bg-gray-800 dark:border-gray-700 dark:hover:border-chetwode-blue-500">
 						<div class="flex items-center space-x-4">
-							<svg class="w-6 h-6 text-slate-500 group-hover:text-chetwode-blue-500 transition-colors duration-200" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+							<svg class="w-6 h-6 text-slate-500 group-hover:text-chetwode-blue-500 transition-colors duration-200 dark:text-gray-200" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
 								<path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
 							</svg>
-							<span class="font-semibold text-slate-700 group-hover:text-slate-900 transition-colors duration-200">LinkedIn</span>
+							<span class="font-semibold text-slate-700 group-hover:text-slate-900 transition-colors duration-200 dark:text-gray-200">LinkedIn</span>
 						</div>
-						<Icon name="lucide:arrow-right" class="inline w-6 h-6 ml-1 text-gray-400 group-hover:text-gray-600 group-hover:translate-x-1 transition-transform duration-200" />
+						<Icon name="lucide:arrow-right" class="inline w-6 h-6 ml-1 text-gray-400 group-hover:text-gray-600 group-hover:translate-x-1 transition-transform duration-200 dark:text-gray-200" />
 					</a>
 
-					<a href="https://github.com/mattisbbn" target="_blank" class="group flex items-center justify-between bg-slate-50/50 hover:bg-white p-4 rounded-xl border border-slate-200 hover:border-chetwode-blue-500 hover:shadow-lg hover:shadow-chetwode-blue-500/10 transition-all duration-200 transform hover:-translate-y-1 mt-4">
+					<a href="https://github.com/mattisbbn" target="_blank" class="group flex items-center justify-between bg-slate-50/50 hover:bg-white p-4 rounded-xl border border-slate-200 hover:border-chetwode-blue-500 hover:shadow-lg hover:shadow-chetwode-blue-500/10 transition-all duration-200 transform hover:-translate-y-1 mt-4 dark:bg-gray-800 dark:border-gray-700 dark:hover:border-chetwode-blue-500">
 						<div class="flex items-center space-x-4">
-							<Icon name="fa:github" class="text-slate-500 text-2xl group-hover:text-chetwode-blue-500 transition-colors duration-200" />
-							<span class="font-semibold text-slate-700 group-hover:text-slate-900 transition-colors duration-200">Github</span>
+							<Icon name="fa:github" class="text-slate-500 text-2xl group-hover:text-chetwode-blue-500 transition-colors duration-200 dark:text-gray-200" />
+							<span class="font-semibold text-slate-700 group-hover:text-slate-900 transition-colors duration-200 dark:text-gray-200">Github</span>
 						</div>
-						<Icon name="lucide:arrow-right" class="inline w-6 h-6 ml-1 text-gray-400 group-hover:text-gray-600 group-hover:translate-x-1 transition-transform duration-200" />
+						<Icon name="lucide:arrow-right" class="inline w-6 h-6 ml-1 text-gray-400 group-hover:text-gray-600 group-hover:translate-x-1 transition-transform duration-200 dark:text-gray-200" />
 					</a>
 					
 				</div>
@@ -300,66 +237,18 @@ import { Icon } from "astro-icon/components";
 		</section>
 	</main>
 
-	<footer class="w-full h-16 flex items-center justify-center text-sm text-slate-500">
+	<footer class="w-full h-16 flex items-center justify-center text-sm text-slate-500 dark:text-gray-200">
         <p>&copy; 2025 Mattis Babin | <a href="/mentions-legales" class="hover:text-slate-800 hover:underline transition-colors">Mentions Légales</a></p>
     </footer>
+
+	
 
 </BaseLayout>
 
 <script>
-	const pills = document.querySelectorAll('.journey-pill');
-	const timelines = document.querySelectorAll('.timeline');
+	import { journeyHandler, ProjectHandler, ThemeToggle } from "../../src/assets/js/Homepage.js";
 
-	const journeyHandler = () => {
-
-		pills.forEach(pill => {
-        pill.addEventListener('click', () => {
-
-			if(pill.classList.contains('active')) {
-				return;
-			}
-
-
-            pills.forEach(otherPill => {
-                otherPill.classList.remove('bg-chetwode-blue-500', 'text-white', 'border-chetwode-blue-500');
-                otherPill.classList.add('bg-gray-50', 'text-bright-gray-900', 'border-2');
-				otherPill.classList.remove('active');
-                timelines.forEach(timeline => {
-                    timeline.classList.add('hidden');
-                });
-            });
-            pill.classList.remove('bg-gray-50', 'text-bright-gray-900', 'border-gray-200');
-            pill.classList.add('bg-chetwode-blue-500', 'text-white', 'border-chetwode-blue-500');
-			pill.classList.add('active');
-			if(pill.id === 'school') {
-				document.getElementById('school-timeline')?.classList.remove('hidden');
-			}
-			if(pill.id === 'professional') {
-				document.getElementById('professional-timeline')?.classList.remove('hidden');
-			}
-        });
-    });
-
-	}
-	const ProjectHandler = () => {
-
-		const expandProjectButtons = document.querySelectorAll(".expand-project-button")
-		const projectDescriptions = document.querySelectorAll(".project-description")   
-
-	expandProjectButtons.forEach((button,index) => {
-
-    button.addEventListener("click",()=>{
-        if(projectDescriptions[index].classList.contains("line-clamp-3")){
-            projectDescriptions[index].classList.remove("line-clamp-3")
-        }else{
-            projectDescriptions[index].classList.add("line-clamp-3")
-        }
-    })
-
-    
-	});
-
-	}
-	ProjectHandler();
 	journeyHandler();
+	ProjectHandler();
+	ThemeToggle();
 </script>

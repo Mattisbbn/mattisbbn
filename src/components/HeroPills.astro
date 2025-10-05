@@ -5,13 +5,15 @@ const { icon, text, href } = Astro.props;
 ---
 
 <a href={href} target="_blank" 
-class="hero-pill text-bright-gray-900 text-center font-semibold flex space-x-2 bg-gray-50 border-2 px-3 py-2 rounded-xl cursor-pointer">
+class="hero-pill text-bright-gray-900 text-center font-semibold flex space-x-2 bg-gray-50 dark:bg-gray-800 dark:text-gray-200 border-2 px-3 py-2 rounded-xl cursor-pointer">
     <Icon name={icon} class="text-2xl" />
     <p class="text-xl">{text}</p>
 </a>
 
 <script>
   import { gsap } from 'gsap';
+
+  const darkMode = document.querySelector('html.dark');
   
   document.addEventListener('DOMContentLoaded', () => {
     const pills = document.querySelectorAll('.hero-pill');
@@ -22,7 +24,7 @@ class="hero-pill text-bright-gray-900 text-center font-semibold flex space-x-2 b
           scale: 1.05,
           rotation: 2,
  
-          color: '#6a63f1',
+          color: darkMode ? '#6a63f1' : '#6a63f1',
           boxShadow: '0 10px 25px rgba(106, 99, 241, 0.2)',
           duration: 0.3,
           ease: 'power2.out'
@@ -42,7 +44,7 @@ class="hero-pill text-bright-gray-900 text-center font-semibold flex space-x-2 b
         gsap.to(pill, {
           scale: 1,
           rotation: 0,
-          color: '#1f2937',
+          color: darkMode ? '#e5e7eb' : '#1f2937',
           boxShadow: '0 0 0 rgba(0,0,0,0)',
           duration: 0.3,
           ease: 'power2.out'

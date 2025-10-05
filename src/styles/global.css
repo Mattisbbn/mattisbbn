@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+
 body {
     font-family: 'Outfit', sans-serif;
 }
@@ -19,6 +22,7 @@ body {
     --color-chetwode-blue-900: #372e81;
     --color-chetwode-blue-950: #211b4b;
     --color-broken-white: #eef1ff;
+    --color-night-blue: #121826;
 }
 /* outfit-100 - latin */
 @font-face {
@@ -92,3 +96,20 @@ body {
     font-weight: 900;
     src: url('/fonts/outfit-v15-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
+
+body {
+  /* 1. On définit la couleur par défaut (mode clair) avec une variable */
+  --grid-color: #cccccc60;
+
+  /* 2. On applique votre quadrillage en utilisant cette variable */
+  background-image: 
+    linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* 3. Quand le site passe en dark mode (via <html class="dark">),
+      on change juste la couleur de la variable pour le quadrillage */
+.dark body {
+  --grid-color: #1F2937; /* Un gris très foncé et subtil */
+}

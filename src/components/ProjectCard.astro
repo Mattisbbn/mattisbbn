@@ -1,29 +1,37 @@
+---
+const { title, description, context, technologies, image, projectLink, githubLink, code } = Astro.props;
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+---
 
-
-
-
-
-<div class="project-card flex flex-col self-start w-10/12 sm:w-1/2 md:w-3/6 lg:w-3/8 xl:w-4/13 2xl:w-3/13 neumorphism rounded-lg overflow-hidden">
-    <img src="assets/images/clickneat.webp" alt="Interface du site Click &amp; Eat, application web de commande de repas développée par Mattis Babin" class="w-full object-cover rounded-t-lg">
+<div class="project-card flex flex-col self-start  w-105 rounded-xl overflow-hidden bg-white shadow-lg dark:bg-gray-800">
+    <Image src={image} alt="Interface du site Click &amp; Eat, application web de commande de repas développée par Mattis Babin" class="w-full object-cover rounded-t-lg" />
     <div class="p-4">
-        <h3 class="text-xl font-bold text-gray-800 mb-2">Click &amp; Eat</h3>
-        <p class="text-gray-600 project-description"><b>Introduction :</b> Ce projet avait pour but de concevoir une application web de type "Click &amp; Collect", appliquée ici au domaine de la restauration, sous le nom fictif de Click&amp;Eat. L'application devait permettre aux clients de réserver une table dans un restaurant, tout en ayant la possibilité de passer leur commande à l'avance, afin de réduire le temps d'attente une fois sur place.
+        <h3 class="text-xl font-bold text-gray-800 mb-2 dark:text-gray-200">{title}</h3>
+        <p class="text-gray-600 line-clamp-3 project-description dark:text-gray-200"><b>Introduction :</b> {description}
         <br><br>
-        <b>Contexte :</b> Ce projet a été réalisé dans le cadre de mon BTS SIO option SLAM. Nous avons eu pour objectif de concevoir une application web de type "Click &amp; Collect", appliquée ici au domaine de la restauration, sous le nom fictif de Click&amp;Eat. L'application devait permettre aux clients de réserver une table dans un restaurant, tout en ayant la possibilité de passer leur commande à l'avance, afin de réduire le temps d'attente une fois sur place.
+        <b>Contexte :</b> {context}
+
+        {code && (
+        <span class="font-mono bg-white/80 dark:bg-gray-700 inline-block p-2 rounded-lg text-sm mt-4">{code}</span>
+        )}
         <br><br>
-        <b>Technologies utilisées :</b> Laravel, Tailwind, Bootstrap, MariaDB, Git, Stripe
+        <b>Technologies utilisées :</b> {technologies}
+
     </p>
 
    
 
 
-    <button class=" mt-2 bg-royal-blue-500 text-white px-3 py-1 rounded-full expand-project-button cursor-pointer"> <i class="fa-solid fa-arrow-up-right-from-square"></i> En savoir plus</button>
+    <button class="mt-2 bg-chetwode-blue-500 text-white px-3 py-1 rounded-full expand-project-button cursor-pointer ">En savoir plus <Icon name="fa:external-link" class="inline w-4 h-4 ms-1" /></button>
 
-       
-    <a href="https://clickneat.mattisbabin.fr/" target="_blank" class="text-gray-600 mb-2 mx-2">Projet <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-
-    <a href="https://github.com/mattisbbn/clickneat" target="_blank" class="text-gray-600 mb-2 ms-2">Github <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-   
+      
+    {projectLink && (
+    <a href={projectLink} target="_blank" class="text-gray-600 mb-2 mx-2 dark:text-gray-200">Projet <Icon name="fa:external-link" class="inline w-4 h-4 ml-1" /></a>
+    )}
+    {githubLink && (
+    <a href={githubLink} target="_blank" class="text-gray-600 mb-2 ms-2 dark:text-gray-200">Github <Icon name="fa:external-link" class="inline w-4 h-4 ml-1" /></a>
+    )}
 
 
 
